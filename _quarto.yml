@@ -1,0 +1,23 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "data_792"
+  author: "Julia Cardwell"
+  date: "2/12/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - data_exploration.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

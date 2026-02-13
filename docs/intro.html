@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Introduction to Spatial Data – data_792</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Spatial Data</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">data_792</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Spatial Data</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-spatial-data" id="toc-what-is-spatial-data" class="nav-link active" data-scroll-target="#what-is-spatial-data"><span class="header-section-number">2</span> What is spatial data?</a></li>
+  <li><a href="#where-does-spatial-data-come-from" id="toc-where-does-spatial-data-come-from" class="nav-link" data-scroll-target="#where-does-spatial-data-come-from"><span class="header-section-number">3</span> Where does spatial data come from?</a>
+  <ul class="collapse">
+  <li><a href="#old-school-spatial-data" id="toc-old-school-spatial-data" class="nav-link" data-scroll-target="#old-school-spatial-data"><span class="header-section-number">3.1</span> Old School Spatial Data</a></li>
+  <li><a href="#new-school-spatial-data" id="toc-new-school-spatial-data" class="nav-link" data-scroll-target="#new-school-spatial-data"><span class="header-section-number">3.2</span> New School Spatial Data</a></li>
+  <li><a href="#crowdsourced-spatial-data" id="toc-crowdsourced-spatial-data" class="nav-link" data-scroll-target="#crowdsourced-spatial-data"><span class="header-section-number">3.3</span> Crowdsourced Spatial Data</a></li>
+  </ul></li>
+  <li><a href="#categories-of-spatial-data" id="toc-categories-of-spatial-data" class="nav-link" data-scroll-target="#categories-of-spatial-data"><span class="header-section-number">4</span> Categories of spatial data</a>
+  <ul class="collapse">
+  <li><a href="#unmarked-point-data" id="toc-unmarked-point-data" class="nav-link" data-scroll-target="#unmarked-point-data"><span class="header-section-number">4.1</span> Unmarked Point Data</a></li>
+  <li><a href="#marked-point-data" id="toc-marked-point-data" class="nav-link" data-scroll-target="#marked-point-data"><span class="header-section-number">4.2</span> Marked Point Data</a></li>
+  <li><a href="#areal-data" id="toc-areal-data" class="nav-link" data-scroll-target="#areal-data"><span class="header-section-number">4.3</span> Areal Data</a></li>
+  <li><a href="#continuous-surfaces" id="toc-continuous-surfaces" class="nav-link" data-scroll-target="#continuous-surfaces"><span class="header-section-number">4.4</span> Continuous Surfaces</a></li>
+  </ul></li>
+  <li><a href="#representing-spatial-data" id="toc-representing-spatial-data" class="nav-link" data-scroll-target="#representing-spatial-data"><span class="header-section-number">5</span> Representing Spatial Data</a>
+  <ul class="collapse">
+  <li><a href="#vector-data" id="toc-vector-data" class="nav-link" data-scroll-target="#vector-data"><span class="header-section-number">5.1</span> Vector data</a></li>
+  <li><a href="#common-vector-data-file-types" id="toc-common-vector-data-file-types" class="nav-link" data-scroll-target="#common-vector-data-file-types"><span class="header-section-number">5.2</span> <strong>Common Vector Data File Types</strong></a></li>
+  <li><a href="#raster-data" id="toc-raster-data" class="nav-link" data-scroll-target="#raster-data"><span class="header-section-number">5.3</span> <strong>Raster Data</strong></a></li>
+  <li><a href="#resolution-in-raster-data" id="toc-resolution-in-raster-data" class="nav-link" data-scroll-target="#resolution-in-raster-data"><span class="header-section-number">5.4</span> Resolution in Raster Data</a></li>
+  <li><a href="#common-raster-data-file-types" id="toc-common-raster-data-file-types" class="nav-link" data-scroll-target="#common-raster-data-file-types"><span class="header-section-number">5.5</span> Common Raster Data File Types</a></li>
+  </ul></li>
+  <li><a href="#spatial-is-special" id="toc-spatial-is-special" class="nav-link" data-scroll-target="#spatial-is-special"><span class="header-section-number">6</span> Spatial is Special</a>
+  <ul class="collapse">
+  <li><a href="#spatial-dependence" id="toc-spatial-dependence" class="nav-link" data-scroll-target="#spatial-dependence"><span class="header-section-number">6.1</span> Spatial Dependence</a></li>
+  <li><a href="#spatial-non-stationarity" id="toc-spatial-non-stationarity" class="nav-link" data-scroll-target="#spatial-non-stationarity"><span class="header-section-number">6.2</span> Spatial Non-Stationarity</a></li>
+  <li><a href="#scale-effects" id="toc-scale-effects" class="nav-link" data-scroll-target="#scale-effects"><span class="header-section-number">6.3</span> Scale Effects</a></li>
+  <li><a href="#special-issues-modifiable-areal-unit-problem" id="toc-special-issues-modifiable-areal-unit-problem" class="nav-link" data-scroll-target="#special-issues-modifiable-areal-unit-problem"><span class="header-section-number">6.4</span> Special Issues: Modifiable Areal Unit Problem</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Spatial Data</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A common headache in classical statistics is the ‘<a href="https://courses.ems.psu.edu/geog586/node/641">spatial problem</a>’: the fact that spatial data inherently violates the fundamental assumption of independent observations. Rather than treating this as a problem, <strong>Spatial Data Science</strong> focuses on leveraging the unique characteristics of spatial data to extract more information from data with a locational component. This chapter conceptually introduces the unique components of spatial data, which will set you up to learn how to use these components to gain deeper insights from this type of data.</p>
+<p><strong>REFLECT: Why might “independent observations” be a problem in geography?</strong></p>
+<section id="what-is-spatial-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> What is spatial data?</h1>
+<p>Spatial data is any data that can be tied to a specific location on Earth. In general, spatial data includes both location and attribute components. The location tells us where a feature is in the world and must be represented using a coordinate system, which provides a standardized way of expressing position on the Earth’s surface. The attributes provide additional information about what exists or occurs at that location.</p>
+<p><strong>REFLECT: What is one spatial dataset that you have worked with in the past?</strong></p>
+</section>
+<section id="where-does-spatial-data-come-from" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Where does spatial data come from?</h1>
+<section id="old-school-spatial-data" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="old-school-spatial-data"><span class="header-section-number">3.1</span> Old School Spatial Data</h2>
+<p>Historically, spatial data was collected almost exclusively by state institutions, militaries, and professional surveyors. These data sources were considered “authoritative” because they relied on credentialed experts, standardized tools, and formal methodologies to achieve a high degree of accuracy. Early data collection involved resource-intensive methods like land surveying (using total stations and reference points), aerial photography for photogrammetry, remote sensing, and field data collection during censuses. The tools were expensive, slow, and required specialized training, but they produced high-quality data with thorough documentation (metadata).</p>
+<p>Some of the common sources of “authoritative” spatial data include:&nbsp;</p>
+<ul>
+<li>US Census Bureau
+<ul>
+<li>Population counts and demographics (e.g., race, age, income)</li>
+<li>Housing and economic data</li>
+<li>Geographic boundaries (e.g., census tracts, block groups, ZIP code tabulation areas)</li>
+</ul></li>
+<li>US Geological Survey (USGS)&nbsp;
+<ul>
+<li>Topographic maps</li>
+<li>Elevation and terrain (e.g., DEMs)</li>
+<li>Land cover and land use (e.g., NLCD)</li>
+<li>Hydrography (rivers, lakes, watersheds)</li>
+<li>Geologic and seismic data</li>
+</ul></li>
+<li>NASA
+<ul>
+<li>Weather and climate data</li>
+<li>Coastal and marine mapping (e.g., nautical charts, sea surface temperature)</li>
+<li>Flood zones and storm surge models</li>
+<li>Fisheries and oceanographic data</li>
+</ul></li>
+<li>State and Local Governments
+<ul>
+<li>Parcel and zoning data</li>
+<li>Transportation networks (roads, transit routes)</li>
+<li>Utilities and infrastructure (e.g., water lines, sewer systems)</li>
+<li>Land use plans and municipal boundaries</li>
+</ul></li>
+<li>EPA
+<ul>
+<li>Air and water quality data</li>
+<li>Environmental justice mapping (e.g., EJScreen)</li>
+<li>Regulated facility locations</li>
+</ul></li>
+</ul>
+</section>
+<section id="new-school-spatial-data" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="new-school-spatial-data"><span class="header-section-number">3.2</span> New School Spatial Data</h2>
+<p>Increasingly, spatial data are generated by non-traditional sources, including individuals, private companies, and automated systems. These data often come as a by-product of everyday activity, social interactions, or commercial operations. They tend to be high-volume, frequently updated, and cover fine-grained temporal and spatial scales. Because of these characteristics, these data are sometimes considered authoritative.&nbsp;</p>
+<p>Some of the common sources of “new school”&nbsp; spatial data include:&nbsp;</p>
+<ul>
+<li>Social Media and User-Generated Content
+<ul>
+<li>Geotagged photos&nbsp;</li>
+<li>Check-ins or location tags&nbsp;</li>
+<li>Reviews or comments with location context (e.g.&nbsp;Yelp, Google Reviews)</li>
+</ul></li>
+<li>Mobility and Location Data
+<ul>
+<li>Smartphone GPS data (from apps or system services)</li>
+<li>Cell tower and Wi-Fi data</li>
+<li>Ride-sharing and transit service data</li>
+</ul></li>
+<li>Commercial and Transactional Data
+<ul>
+<li>Credit/debit card transactions</li>
+<li>Retail foot traffic and store visit data</li>
+<li>E-commerce delivery and logistics data</li>
+</ul></li>
+<li>Sensor and IoT Data
+<ul>
+<li>Smart city sensors (traffic cameras, parking sensors)</li>
+<li>Wearable devices (fitness trackers, health monitors)</li>
+<li>Environmental sensors (temperature, air quality, noise)</li>
+</ul></li>
+<li>Imagery and Remote Sensing Data (non-governmental)
+<ul>
+<li>Satellite imagery from private companies (e.g., Planet Labs, Maxar)</li>
+<li>Drone-collected imagery</li>
+</ul></li>
+</ul>
+</section>
+<section id="crowdsourced-spatial-data" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="crowdsourced-spatial-data"><span class="header-section-number">3.3</span> Crowdsourced Spatial Data</h2>
+<p>Collecting spatial data is now easier than ever since almost every smartphone has a built-in GPS.&nbsp; Intentional spatial data collection by non-experts is often called crowdsourced data. Crowdsourced or community-collected geospatial data has become an increasingly important way to capture information that is intentionally or unintentionally missed by “authoritative” sources. These grassroots efforts often seek to fill data gaps that disproportionately affect marginalized communities. Some well-known examples of crowdsourced data include:</p>
+<ul>
+<li>OpenStreetMap: A free, crowdsourced map of the world built by millions of contributors, widely used in humanitarian efforts and mapping underserved areas.</li>
+<li>Mapillary: A platform where users upload street-level imagery to support navigation, urban development, and computer vision training.</li>
+<li>eBird: A citizen science project where birdwatchers record sightings, contributing to biodiversity monitoring and conservation.</li>
+<li>iNaturalist: A platform where people document observations of plants and animals, helping scientists track species distribution and ecological change.</li>
+</ul>
+<p><strong>REFLECT: The rise of crowdsourced data has created tension between official and unofficial sources of spatial data. What might this tension tell us about the role of power in data production?</strong></p>
+</section>
+</section>
+<section id="categories-of-spatial-data" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Categories of spatial data</h1>
+<p>Spatial features can be represented in different ways depending on the phenomenon being studied. These representations are models that aim to capture the feature’s real-world form and context. How a feature is represented influences the types of analysis, visualization, and interpretation that are possible.&nbsp;</p>
+<section id="unmarked-point-data" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="unmarked-point-data"><span class="header-section-number">4.1</span> Unmarked Point Data</h2>
+<p>Unmarked point data consist of points that represent the locations of events or objects, but do not have any additional attributes. In these data, the location itself is inherently meaningful because it is the primary information being captured. Examples include the locations of trees in a park, streetlights along a road, or car accident sites.&nbsp;</p>
+</section>
+<section id="marked-point-data" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="marked-point-data"><span class="header-section-number">4.2</span> Marked Point Data</h2>
+<p>Marked point data consist of points that represent locations with associated attributes or “marks”, which provide additional information about the feature at that location. For example, earthquake epicenters may include magnitude, houses may have assessed property values, or restaurants may include ratings. In this type of data, the location may or may not be meaningful depending on the context. For phenomena like earthquakes or crime, the location itself is important, while for features like weather stations, the location is primarily where the measurement occurs, and the focus is on the attributes.</p>
+</section>
+<section id="areal-data" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="areal-data"><span class="header-section-number">4.3</span> Areal Data</h2>
+<p>Areal data represent spatial features as areas or zones. In some cases, the boundaries themselves are meaningful, such as countries, where the delineation reflects real-world separation. In other cases, the areas are arbitrary aggregations created for analysis purposes, such as census tracts or block groups, where the exact location within the area is not meaningful, but the attributes assigned to the area (e.g., population, income) are.&nbsp;</p>
+</section>
+<section id="continuous-surfaces" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="continuous-surfaces"><span class="header-section-number">4.4</span> Continuous Surfaces</h2>
+<p>Continuous surfaces represent phenomena that vary continuously across space and are usually stored in a grid format, where each cell contains a value. In this type of data, the location of individual cells is not inherently meaningful, but the values themselves describe a property of the landscape or environment at that position. Examples include temperature or rainfall maps, digital elevation models, and air pollution concentrations.&nbsp;</p>
+<p><strong>REFLECT: Consider the case study of forest fires in Western North Carolina. What would be an example of each category of spatial data that might be useful for analyzing residential risk to forest fires?</strong></p>
+</section>
+</section>
+<section id="representing-spatial-data" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Representing Spatial Data</h1>
+<p>When translating real-world features into geographic data, there are two main “conceptual” views of the world: the field view and the object view. A field view treats the world as a continuous surface, where each location is associated with one or more attributes (connect to continuous surfaces above). In contrast, an object view conceptualizes the world as made up of discrete entities that have clearly defined boundaries and exist in specific locations (connect to areal data, marked and unmarked points). Between these objects, there can be empty space with no associated features.&nbsp;</p>
+<p>These conceptual models align with two major data models used in spatial data. A vector-based model represents geographic features as sets of points, lines, or polygons. This is well-suited for discrete objects. A raster-based model, on the other hand, represents space as a grid of regularly spaced cells, each containing a value that represents an attribute at that location. This structure is ideal for continuous data, where each cell captures a small piece of a surface.</p>
+<section id="vector-data" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="vector-data"><span class="header-section-number">5.1</span> Vector data</h2>
+<p>Vector data is built around geometries, which are encoded into the file. The most basic geometry type is a point. A point is represented as a single coordinate pair (x, y).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mgimond.github.io/Spatial/chp02_0.html"><img src="images/point.png" class="img-fluid figure-img" alt="From: Intro to GIS and Spatial Analysis"></a></p>
+<figcaption>From: Intro to GIS and Spatial Analysis</figcaption>
+</figure>
+</div>
+<p>Points can then be combined to create lines and polygons. To create a line, at least two distinct points must be connected.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mgimond.github.io/Spatial/index.html"><img src="images/line.png" class="img-fluid figure-img" alt="From: Intro to GIS and Spatial Analysis"></a></p>
+<figcaption>From: Intro to GIS and Spatial Analysis</figcaption>
+</figure>
+</div>
+<p>A polygon is created when three or more points are connected which means the starting and ending coordinate pairs must be the same. Of the three basic geometric primitives (point, line, polygon), only polygons have an area.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mgimond.github.io/Spatial/index.html"><img src="images/polygon.png" class="img-fluid figure-img" alt="From: Intro to GIS and Spatial Analysis"></a></p>
+<figcaption>From: Intro to GIS and Spatial Analysis</figcaption>
+</figure>
+</div>
+<p>With vector data, resolution is defined by several conditions:&nbsp;</p>
+<ol type="1">
+<li>The precision of the coordinates</li>
+<li>The complexity of the shape (for instance, how many vertices are used to represent the feature)</li>
+<li>The minimum mapping unit (MMU). This represents the smallest feature that would be included in the dataset</li>
+</ol>
+<p><strong>REFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.</strong></p>
+</section>
+<section id="common-vector-data-file-types" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="common-vector-data-file-types"><span class="header-section-number">5.2</span> <strong>Common Vector Data File Types</strong></h2>
+<p>Shapefile (.shp): By far, the most common vector data file type you’ll encounter when accessing geospatial data is the Shapefile (.shp). This format, which is semi-proprietary (structured and maintained by ESRI), has become the dominant standard. This is not because it offers superior functionality, but because of ESRI’s early dominance in the GIS software market. Shapefiles are a non-topological format made up of several files, including the .shp (geometry), .shx (shape index), .dbf (attribute table), .prj (projection), and sometimes others.&nbsp;</p>
+<p>GeoPackage (.gpkg): GeoPackage is a relatively modern, open-source format developed by the Open Geospatial Consortium (OGC). Built on SQLite, it allows multiple layers and attribute tables to exist within a single .gpkg file, streamlining data management and reducing file clutter. This structure also supports more advanced querying, similar to what’s possible in a relational database– for example, joining attribute tables, filtering by SQL expressions, or performing spatial queries within the file itself.&nbsp;</p>
+<p>GeoJSON (.geojson): GeoJSON is a lightweight, text-based format for encoding vector features using JavaScript Object Notation (JSON). It is especially popular in web mapping environments, where its structure is easily parsed by browsers and APIs. GeoJSON is limited to WGS84 coordinates.&nbsp;</p>
+<p>File Geodatabase (.gdb):The File Geodatabase is a high-capacity, high-performance format developed by ESRI for use with ArcGIS. It stores vector data, rasters, attribute tables, topological rules, subtypes, and more in a structured folder system. This format supports large datasets (into the terabytes), long field names, and complex relationships between layers. While it’s proprietary and not natively supported by all software, it provides powerful data management and analysis capabilities within the ESRI ecosystem.&nbsp;</p>
+<p><strong>REFLECT: Despite their ubiquity, shapefiles come with serious limitations: a maximum file size of 2 GB, field names limited to 10 characters, and a maximum of 255 fields. Many believe, myself included, that <a href="http://switchfromshapefile.org/">Shapefile must die!</a> What are some potential benefits of using an open source data format compared to an ESRI product?</strong></p>
+</section>
+<section id="raster-data" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="raster-data"><span class="header-section-number">5.3</span> <strong>Raster Data</strong></h2>
+<p>In a raster model, real-life features are represented as an array of pixels. Instead of distinct geometries, a raster is made up of regularly spaced pixels of identical sizes, and each pixel is associated with a value.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mgimond.github.io/Spatial/index.html"><img src="images/raster.png" class="img-fluid figure-img" alt="From: Intro to GIS and Spatial Analysis"></a></p>
+<figcaption>From: Intro to GIS and Spatial Analysis</figcaption>
+</figure>
+</div>
+</section>
+<section id="resolution-in-raster-data" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="resolution-in-raster-data"><span class="header-section-number">5.4</span> Resolution in Raster Data</h2>
+<p>In raster data, resolution refers to the size of each pixel, typically expressed in ground units (e.g., feet or meters). Smaller pixels mean higher resolution, capturing more detail. Most raster sources, such as satellite imagery, have fixed native resolutions determined by the sensor’s capabilities.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mgimond.github.io/Spatial/index.html"><img src="images/raster_multiple_resolutions.png" class="img-fluid figure-img" alt="Intro to GIS and Spatial Analysis"></a></p>
+<figcaption>Intro to GIS and Spatial Analysis</figcaption>
+</figure>
+</div>
+<p><strong>REFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.</strong></p>
+</section>
+<section id="common-raster-data-file-types" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="common-raster-data-file-types"><span class="header-section-number">5.5</span> Common Raster Data File Types</h2>
+<p>GeoTIFF (.tif): GeoTIFF is the most widely used raster data format for geospatial applications. It’s a standard TIFF image that includes embedded geographic metadata (like coordinate system, bounds, and resolution), making it easy to georeference. GeoTIFFs are versatile, lossless, and widely supported across GIS platforms. They can store single-band or multi-band imagery, making them suitable for satellite images, elevation data, and classified rasters.</p>
+<p>NetCDF (.nc): NetCDF (Network Common Data Form) is a format commonly used for storing multidimensional scientific data, such as climate variables or oceanographic models. It supports time-series rasters, multiple dimensions (e.g., x, y, time, depth), and internal compression. NetCDFs are favored in academic and environmental modeling contexts, but can be complex to manage without specialized tools.</p>
+</section>
+</section>
+<section id="spatial-is-special" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Spatial is Special</h1>
+<section id="spatial-dependence" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="spatial-dependence"><span class="header-section-number">6.1</span> Spatial Dependence</h2>
+<p>Tobler’s First Law of Geography states that “everything is related to everything else, but near things are more related than distant things”. Spatial dependence arises because the value of a variable at one location is often influenced by nearby locations. Spatial dependence contributes to <strong>spatial patterns</strong>, which describes the structures and patterns that emerge between spatial phenomena, and can be quantified using measures of spatial autocorrelation.&nbsp;</p>
+<p>There are several general processes that cause spatial dependence:</p>
+<ul>
+<li>Spatial defusion (spillover effects)
+<ul>
+<li>Many phenomena spread across space from one location to nearby locations. For example, a new housing development or commercial center may increase property values in surrounding neighborhoods</li>
+</ul></li>
+<li>Environmental or Physical Constraints
+<ul>
+<li>The environment itself can create spatial dependence. For example, elevation and slope affect where houses can be built and climate determines vegetation zones</li>
+</ul></li>
+<li>Social, Economic, or Cultural Processes
+<ul>
+<li>Human behavior is often spatially organized because interactions are strongest among nearby individuals. People tend to live near others with similar socioeconomic status, cultural preferences, or lifestyles, which creates clusters of similar social and economic characteristics across space</li>
+</ul></li>
+<li>Uncaptured Spatially Structured Variables
+<ul>
+<li>Sometimes the variable we’re studying is influenced (see <strong>spatial processes</strong>) by other factors that also vary across space, but those factors are not measured.For example, air pollution levels in a city might be affected by traffic volume, industrial activity, and local wind patterns. Because these unmeasured factors are spatially structured, nearby locations often have similar pollution levels, creating spatial autocorrelation.</li>
+</ul></li>
+</ul>
+<p><strong>REFLECT: For all of the process types above, come up with an additional example</strong></p>
+<p>Spatial autocorrelation can be strongly positive (which results in a clustered pattern), weak (which results in a random spatial pattern), or strongly negative (which results in a dispersed pattern).&nbsp;</p>
+<p>The map below shows median home value by census tract in the Triangle region of North Carolina. This is an example of areal spatial data without meaningful boundaries, which means that we are interpreting how values, not locations, are associated with each other. Looking at this map, we can determine that there are clear clusters of positive and negative values (i.e.&nbsp;median home value is more similar to nearer locations). However, we are not able to determine the strength of this spatial autocorrelation just using the map, this requires more advanced methodologies.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/med_home_val.png" class="img-fluid figure-img" width="527"></p>
+<figcaption>Median Home Value Across the Triangle</figcaption>
+</figure>
+</div>
+<p>In contrast, many species distributions, especially of territorial species, result in a dispersed spatial pattern. Individuals or groups maintain a certain distance from one another to reduce competition for resources such as food, nesting sites, or mating opportunities. Examples include wolves, foxes, and certain bird species, where each territory is spaced to minimize overlap with neighbors.</p>
+<p>If spatial autocorrelation is weak, it means that nearby locations are not consistently similar or dissimilar. This can happen when the underlying process is essentially random, when the factors influencing it are not spatially structured, or when multiple processes with opposing effects cancel each other out. Measurement or scale issues can also weaken apparent spatial dependence; for example, aggregating data over large regions can mask local patterns, making the distribution appear random.&nbsp;&nbsp;</p>
+</section>
+<section id="spatial-non-stationarity" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="spatial-non-stationarity"><span class="header-section-number">6.2</span> Spatial Non-Stationarity</h2>
+<p>Spatial patterns are caused by a combination of non-spatial and spatial processes. A spatial process is a mechanism, or set of mechanisms, that operate through space. This means that the location, proximity, or connectivity of features matters for how the process operates (i.e.&nbsp;the process itself <strong>DEPENDS</strong> on spatial relationships).&nbsp; This differs fundamentally from a non-spatial process, in which the outcome is independent of location or spatial arrangement.&nbsp;</p>
+<p>Taking our example of median home value, we could consider several potential spatial processes that result in the clustered spatial pattern– proximity effects (value of a home is influenced by nearby properties) and accessibility (homes closer to transit, downtown areas, or commercial hubs are more valuable). However, the pattern will also be influenced by non-spatial processes, such as home size, home age, and home quality.&nbsp;</p>
+<p>What is important to note about spatial processes is that they are <strong>non-stationary</strong>. This means that the way that a process operates can change across space, which means that the relationships, mechanisms, or effects observed in one location might not be the same in another location. Recognizing non-stationarity is crucial for spatial analysis because it means that models that assume a uniform process (global models) might not accurately capture spatial dynamics.&nbsp;</p>
+<p>Going back to our example of home value, one hypothesized spatial process would be proximity to employment. We can use a <strong>Geographically Weighted Regression</strong> to explore how the relationship between these two variables vary across space. A geographically weighted regression creates a local regression model for each location by using nearby observations weighted by distance. We can use average commute as a proxy for proximity to major employment centers. The map below shows the coefficient of the GWR at different locations across the Triangle. This coefficient represents the local association between commute time and median home value, indicating how the relationship differs between the urban core and surrounding suburban areas. Negative coefficients in the central city suggest that longer commute times are associated with lower home values, reflecting the premium placed on accessibility, while positive coefficients in suburban areas suggest that longer commutes are associated with higher home values, likely capturing trade-offs between housing size, affordability, and distance from employment centers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gwr.png" class="img-fluid figure-img" width="509"></p>
+<figcaption>Local Coefficient of GWR (Commute ~ Home Value)</figcaption>
+</figure>
+</div>
+<p><strong>REFLECT: Residential tree canopy cover is another spatial pattern that is usually clustered. Hypothesize on some non-spatial and spatial processes that might contribute to clustering, and how they might be non-stationary.</strong></p>
+</section>
+<section id="scale-effects" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="scale-effects"><span class="header-section-number">6.3</span> Scale Effects</h2>
+<p>Spatial processes also differ across scales. For instance, we can consider that there are spatial processes at the local, city, or state level that might influence home value. At the local level, processes such as neighborhood clustering of high-amenity areas, street connectivity, or proximity to parks can influence home values. At the city level, processes like zoning, transit accessibility, or distribution of commercial centers shape housing prices across neighborhoods. At the state or regional level, spatial processes include the distribution of economic hubs, in-migration, and&nbsp; regional commuting flow. Because spatial processes differ across scales, analysis must account for scale to accurately capture the mechanisms influencing space.</p>
+<p><strong>REFLECT: Think about tree canopy coverage at different scales (neighborhood, city, county). How might the spatial processes differ across scales?</strong></p>
+</section>
+<section id="special-issues-modifiable-areal-unit-problem" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="special-issues-modifiable-areal-unit-problem"><span class="header-section-number">6.4</span> Special Issues: Modifiable Areal Unit Problem</h2>
+<p>Individual (or point-level) spatial data is often aggregated to areal units. This happens for several reasons:</p>
+<ul>
+<li>Privacy
+<ul>
+<li>Aggregating data protects sensitive information about individuals by reporting only summary values for larger areas</li>
+</ul></li>
+<li>Data availability
+<ul>
+<li>Some data are only measured or published at aggregated levels</li>
+</ul></li>
+<li>Analytical convenience
+<ul>
+<li>Aggregating data reduces complexity and makes spatial analysis more computationally manageable</li>
+</ul></li>
+<li>Alignment with policy or planning units
+<ul>
+<li>&nbsp;Many decisions (for instance, in urban planning, public health, or transportation) are made at administrative or political boundaries</li>
+</ul></li>
+</ul>
+<p>While aggregating data is often necessary or useful, it introduces the Modifiable Areal Unit Problem (MAUP), where the choice of spatial units (size or boundaries) can influence statistical results and spatial patterns. These results can change significantly depending on how the boundaries are drawn (zone effect) and how large or small the units are (scale effect).</p>
+<p>Consider the summary statistics for percent poverty across North Carolina zip codes vs.&nbsp;counties to see the impact of the scale effect:</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>Aggregation Unit</td>
+<td>Mean&nbsp;</td>
+<td>Median</td>
+<td>Min</td>
+<td>Max</td>
+<td>St.&nbsp;Dev</td>
+</tr>
+<tr class="even">
+<td>Zip Code</td>
+<td>25.33</td>
+<td>23.76</td>
+<td>0</td>
+<td>100</td>
+<td>13.82</td>
+</tr>
+<tr class="odd">
+<td>County</td>
+<td>26.46</td>
+<td>25.48</td>
+<td>12.34</td>
+<td>40.83</td>
+<td>6.58</td>
+</tr>
+</tbody>
+</table>
+<p>Aggregating data into larger units can smooth out local variation and reduce variability. For example, comparing the standard deviation at the zip code (13.82) to the county (6.58) shows that smaller units capture more heterogeneity.&nbsp;</p>
+<p>Because of the MAUP, we need to be careful when interpreting aggregated data, given that patterns observed at one scale or within a particular zoning scheme may not hold at another. Since spatial patterns are often scale-dependent, one way to mitigate the effects of the MAUP is to align the selection of areal units with the hypothesized scale of the underlying process. Robustness can also be assessed by comparing results across similar spatial units– for example, examining patterns at the census block group level versus the census tract level, or testing slightly different zoning schemes. Additionally, advanced methods such as hierarchical or multiscale modeling can explicitly account for variations across scales, providing a more accurate understanding of spatial dynamics.</p>
+<p><strong>REFLECT: Consider the research question: To what extent does socioeconomic status determine a neighborhood’s proximity to a full-service grocery store? What would be concerns about how the MAUP might affect our analysis, and how could we minimize the MAUP?</strong></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
