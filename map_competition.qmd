@@ -1,0 +1,20 @@
+# Group Workshop: Map Competition
+
+This group workshop is designed to assess ability to apply map design concepts.
+
+### Instructions
+
+1.  Create a new .Rmd named LASTNAME1LASTNAME2.Rmd (include all last names in your group)
+
+2.  Create a well-designed map that leverages the stylistic and formatting capabilities of the `tmap` package. You will likely want to add formatting components that we have not explicitly covered. See [Spatial Data Visualization with tmap](https://tmap.geocompx.org/) for additional assistance.
+
+## Map Prompt: Create a well-designed map of weekend bus serviceability to Chapel Hill parks
+
+```{r, eval = F}
+
+ch_boundary <- st_read("https://drive.google.com/uc?export=download&id=1ievfdMpmrZBO1qBI_uILYpb1XbVXmC0b")
+
+num_weekend_buses <- st_read("https://drive.google.com/uc?export=download&id=1sm1wakDXNoHQjXHhScH7Q5QdgqRvZTCD")
+
+parks <- st_read("https://drive.google.com/uc?export=download&id=1WfzXK_3NZsll9ov8uD5-9i8ceVMlEUlN")
+```

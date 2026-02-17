@@ -1,0 +1,90 @@
+# HW #2
+
+## Formatting Guidance ([SAMPLE FILE](https://drive.google.com/file/d/1t7YkI9z3lFiUyRwKfXYCgg6L_oUxSuap/view?usp=sharing))
+
+-   Submission:
+    -   You should submit two files for each R based homework– a .Rmd and a .html.
+    -   You should not submit any other files.
+    -   The files should be saved using the following convention: LASTNAME_HW_2.Rmd
+-   Code:
+    -   All R code must appear inside code chunks. Do not place any code in the body text.
+    -   All commands **MUST** have a descriptive comment
+    -   Code chunks should not display messages or warnings in the knitted .html. If messages or warnings are printed, you need to include `message = F, warning = F` in the r header.
+    -   Each code chunk should perform one logical set of tasks/analyses (i.e. one code chunk could include all of your data manipulation, another code chunk could contain all of your data visualizations)
+    -   Do not print large datasets or unnecessary intermediate outputs
+-   Organization
+    -   Code chunks should be logically organized under clear, informative section headers
+    -   Written responses should appear directly below the code chunk that produces the the relevant output
+
+## Overview
+
+In this homework you will practice working with spatial data in R by examining spatial and non-spatial attributes, mapping variables, and calculating descriptive and spatial descriptive statistics.
+
+You will work with several spatial datasets:
+
+-   [American Community Survey](https://data.census.gov/) data on average commute for North Carolina counties and census tracts (vector data)
+-   Modeled Wet Bulb Globe Temperature on July 17, 2025 across Orange County, NC provided by Andrew Robinson (Geography PhD student) (raster data). WBGT is a measure of heat stress.
+-   Locations of wind turbines in the continental US from [The U.S. Wind Turbine Database](https://energy.usgs.gov/uswtdb/)
+
+## Rubric
+
+| Specification | Points |
+|-------------------------------------------------|-----------------------|
+| Lab is submitted on Canvas and follows general formatting guidelines. Minor formatting issues may be present but do not interfere with readability or interpretation. | 3 |
+| **Reading Data**: All required datasets are read into R. Responses correctly identify basic properties of the data. Minor inaccuracies are acceptable if overall understanding is clear. | 3 |
+| **Manipulating Data:** Code produces the required variables and transformed datasets. Minor coding errors or inefficiencies are acceptable if the results are usable. | 7 |
+| **Describing Data**: Required maps, tables, and non-map graphics are present. Written responses correctly describe patterns or distributions shown in the outputs. Response is focused on extracting meaning, not simply summarizing descriptive statistics results. | 7 |
+
+## Homework Instructions
+
+Create a new .Rmd document. Then complete the following tasks. Your .Rmd file should be organized so that each task has a text header, a code chunk, comments for each command, and any written components directly under the chunk. Remember to follow the Formatting Guide.
+
+**Reading Data**
+
+-   Load the `tidyverse` , `tmap`, `terra`, `sfdep`, and `sf` libraries
+
+-   Read in the data using the following commands:
+
+    ```{r, eval = F}
+    turbines <- st_read("https://drive.google.com/uc?export=download&id=1LLl871Mv3BY7hI56kWPiaMvvk5SxFcQX")
+
+    county_wfh <- st_read("https://drive.google.com/uc?export=download&id=1kV-HKXvlrhfSKOHli4QuRfNoW6I76ihN")
+
+    tract_wfh <- st_read("https://drive.google.com/uc?export=download&id=1H-MgCZmca_0YLHg3P6zxqhVrldOTddyD")
+
+    wbgt_raster <- rast("https://drive.google.com/uc?export=download&id=1l4kZvyCf9ySy7CQlKlzl5y9z6aYHHlpa")
+    ```
+
+-   Answer the following questions:
+
+    -   What is the CRS of each dataset? Is it a geographic coordinate system or a projected coordinate system?
+    -   What is the geometry type of `turbines`, `county_wfh`, and `tract_wfh`?
+    -   What is the resolution of the WBGT data?
+
+**Manipulating Data**
+
+-   Use a tidyverse command to calculate a new field `perc_wfh` in the `county_wfh` and `tract_wfh` objects. (`wfeE` is the number of people working from home and `totalE` is the total population)
+
+**Describing Work From Home**
+
+-   Create a map of `perc_wfh` for both the `county_wfh` and `tract_wfh` objects.
+-   Create a descriptive statistics table of `perc_wfh` for both the `county_wfh` and `tract_wfh` objects
+    -   To make a descriptive statistics table when you are using spatial data you must add the command `st_drop_geometry()` before creating the table (i.e. `DATA |> st_drop_geometry() |> select(VARIABLE)`
+-   Create one non-map graphic of `perc_wfh` for both the `county_wfh` and `tract_wfh` objects
+-   Answer the following questions (*Remember that the underlying data for the ACS is collected at the individual/household level, the only difference is the level of spatial aggregation*):
+    -   How does the distribution of `perc_wfh` differ between the county-level and tract level data? Include discussion of central tendency, spread, shape, and frequency.
+    -   How does changing the scale of aggregation (counties vs. tracts) affect the spatial pattern you observe?
+    -   What does this example demonstrate about the scale effect of MAUP and why it matters for interpreting spatial data?
+
+**Describing Heat Stress in Orange County NC**
+
+-   Create a map of `wbgt_raster`
+-   Summarize the cell values of `wbgt_raster`
+
+**Describing Wind Turbines**
+
+-   Calculate mean center of wind turbines, standard deviational ellipse of wind turbines, and weighted mean center based on a variable of interest selected from the [dataset](https://eta-publications.lbl.gov/sites/default/files/2025-06/uswtdb_v8_1_20250527_codebook.xlsx).
+    -   To calculate the weighted mean center, you may need to drop NA values from your variable of interest. To do this, create a new object `turbine_dropped <- turbines |> drop_na(VARIABLEOFINTEREST)` and use that object to calculate the weighted mean center.
+-   Create a map that symbolizes the mean center of wind turbines, the standard deviational ellipse of wind turbines, and the weighted mean center (*make sure that you add manual legend entries for the mean center and weighted mean center*)
+-   Answer the following questions:
+    -   What does your map reveal about the spatial distribution of wind turbines?

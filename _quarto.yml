@@ -10,6 +10,15 @@ book:
     - index.qmd
     - intro.qmd
     - data_exploration.qmd
+    - describing_spatial_data.qmd
+    - tmap.qmd
+    - hw2.qmd
+    - covid.qmd
+    - map_competition.qmd
+    - wrangling.qmd
+    - spatial_wrangling.qmd
+    - analytical_datasets.qmd
+    - analyticaldatasetworkshop.qmd
 
 format:
   html:

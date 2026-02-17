@@ -1,0 +1,44 @@
+# Group Workshop: Describing Covid
+
+This group workshop is designed to assess ability to apply spatial descriptive statistics. 
+
+### Instructions
+
+1.  Create a new .Rmd named LASTNAME1LASTNAME2.Rmd (include all last names in your group)
+
+2.  Add a chunk for loading libraries and reading in data. Add the following code into that chunk:
+
+    ```{r, eval=F}
+    ## load necessary libraries
+    library(tidyverse)
+    library(gt)
+    library(sf)
+    library(e1071)
+    library(tmap)
+    library(maptiles)
+    library(spdep)
+
+
+    #read in data
+
+    ##cumulative covid cases and deaths on April 1, 2020
+    covid_deaths_04012020 <- st_read("https://drive.google.com/uc?export=download&id=1spBLqVxa25a7FDo7U7aNDJF2t2N0-uXv")
+
+    ##cumulative covid cases and deaths on July 1, 2020
+    covid_deaths_07012020 <- st_read("https://drive.google.com/uc?export=download&id=1ZNka0ffMXSVAqVDCj1R-oYh37BH9ziAZ")
+
+    ```
+
+3.  Add "Describing Covid" as a first-level header. In each of the covid datasets, there is a variable named `cases` which represents the cumulative cases in each county on the given date and a variable named `deaths` which represents the cumulative deaths in each county on the given date. **Note that the dataset only includes counties that had at least one case or death**. In this section you will compute descriptive statistics for cases and deaths on each date, compute spatial descriptive statistics, and create a well designed map. Your code chunk should:
+
+    -   Create a descriptive statistics table of cases and deaths for each dataset
+    -   Compute a weighted mean center for cases and deaths on each date
+    -   Create a map for the April 2020 data that symbolizes `cases` by county, as well as the mean center for `cases` AND `deaths`. Make sure that you add manual legend entries for the mean center of cases and deaths.
+    -   Create a map for the July 2020 data that symbolizes `cases` by county, as well as the mean center for `cases` AND `deaths`. Make sure that you add manual legend entries for the mean center of cases and deaths.
+
+4.  Below your chunk, you should write 1-2 paragraphs that do the following:
+
+    -   Summarize what the descriptive statistics reveal about the distribution of Covid cases and deaths
+    -   Explain why creating a meaningful histogram or boxplot for this data would be challenging
+    -   Describe what the maps (including the spatial descriptive statistics) reveal about the spatial distribution of Covid cases and deaths.
+    -   Explain why an unweighted mean center isn’t meaningful in this context (consider the unit of observation)

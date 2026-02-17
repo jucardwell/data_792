@@ -2,11 +2,11 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction to Spatial Data",
+    "title": "1  Introduction to Spatial Data/ HW#1",
     "section": "",
-    "text": "2 What is spatial data?\nA common headache in classical statistics is the ‘spatial problem’: the fact that spatial data inherently violates the fundamental assumption of independent observations. Rather than treating this as a problem, Spatial Data Science focuses on leveraging the unique characteristics of spatial data to extract more information from data with a locational component. This chapter conceptually introduces the unique components of spatial data, which will set you up to learn how to use these components to gain deeper insights from this type of data.\nREFLECT: Why might “independent observations” be a problem in geography?\nSpatial data is any data that can be tied to a specific location on Earth. In general, spatial data includes both location and attribute components. The location tells us where a feature is in the world and must be represented using a coordinate system, which provides a standardized way of expressing position on the Earth’s surface. The attributes provide additional information about what exists or occurs at that location.\nREFLECT: What is one spatial dataset that you have worked with in the past?",
+    "text": "2 Introduction to Spatial Data\nAs you move through this reading, take note of the reflection questions (REFLECT). Write answers to these questions on a separate document. You will turn in that document as HW#1.\nA common headache in classical statistics is the ‘spatial problem’: the fact that spatial data inherently violates the fundamental assumption of independent observations. Rather than treating this as a problem, Spatial Data Science focuses on leveraging the unique characteristics of spatial data to extract more information from data with a locational component. This chapter conceptually introduces the unique components of spatial data, which will set you up to learn how to use these components to gain deeper insights from this type of data.\nREFLECT: Why might “independent observations” be a problem in geography?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
@@ -22,161 +22,161 @@
   {
     "objectID": "intro.html#old-school-spatial-data",
     "href": "intro.html#old-school-spatial-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "3.1 Old School Spatial Data",
-    "text": "3.1 Old School Spatial Data\nHistorically, spatial data was collected almost exclusively by state institutions, militaries, and professional surveyors. These data sources were considered “authoritative” because they relied on credentialed experts, standardized tools, and formal methodologies to achieve a high degree of accuracy. Early data collection involved resource-intensive methods like land surveying (using total stations and reference points), aerial photography for photogrammetry, remote sensing, and field data collection during censuses. The tools were expensive, slow, and required specialized training, but they produced high-quality data with thorough documentation (metadata).\nSome of the common sources of “authoritative” spatial data include: \n\nUS Census Bureau\n\nPopulation counts and demographics (e.g., race, age, income)\nHousing and economic data\nGeographic boundaries (e.g., census tracts, block groups, ZIP code tabulation areas)\n\nUS Geological Survey (USGS) \n\nTopographic maps\nElevation and terrain (e.g., DEMs)\nLand cover and land use (e.g., NLCD)\nHydrography (rivers, lakes, watersheds)\nGeologic and seismic data\n\nNASA\n\nWeather and climate data\nCoastal and marine mapping (e.g., nautical charts, sea surface temperature)\nFlood zones and storm surge models\nFisheries and oceanographic data\n\nState and Local Governments\n\nParcel and zoning data\nTransportation networks (roads, transit routes)\nUtilities and infrastructure (e.g., water lines, sewer systems)\nLand use plans and municipal boundaries\n\nEPA\n\nAir and water quality data\nEnvironmental justice mapping (e.g., EJScreen)\nRegulated facility locations",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "4.1 Old School Spatial Data",
+    "text": "4.1 Old School Spatial Data\nHistorically, spatial data was collected almost exclusively by state institutions, militaries, and professional surveyors. These data sources were considered “authoritative” because they relied on credentialed experts, standardized tools, and formal methodologies to achieve a high degree of accuracy. Early data collection involved resource-intensive methods like land surveying (using total stations and reference points), aerial photography for photogrammetry, remote sensing, and field data collection during censuses. The tools were expensive, slow, and required specialized training, but they produced high-quality data with thorough documentation (metadata).\nSome of the common sources of “authoritative” spatial data include: \n\nUS Census Bureau\n\nPopulation counts and demographics (e.g., race, age, income)\nHousing and economic data\nGeographic boundaries (e.g., census tracts, block groups, ZIP code tabulation areas)\n\nUS Geological Survey (USGS) \n\nTopographic maps\nElevation and terrain (e.g., DEMs)\nLand cover and land use (e.g., NLCD)\nHydrography (rivers, lakes, watersheds)\nGeologic and seismic data\n\nNASA\n\nWeather and climate data\nCoastal and marine mapping (e.g., nautical charts, sea surface temperature)\nFlood zones and storm surge models\nFisheries and oceanographic data\n\nState and Local Governments\n\nParcel and zoning data\nTransportation networks (roads, transit routes)\nUtilities and infrastructure (e.g., water lines, sewer systems)\nLand use plans and municipal boundaries\n\nEPA\n\nAir and water quality data\nEnvironmental justice mapping (e.g., EJScreen)\nRegulated facility locations",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#new-school-spatial-data",
     "href": "intro.html#new-school-spatial-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "3.2 New School Spatial Data",
-    "text": "3.2 New School Spatial Data\nIncreasingly, spatial data are generated by non-traditional sources, including individuals, private companies, and automated systems. These data often come as a by-product of everyday activity, social interactions, or commercial operations. They tend to be high-volume, frequently updated, and cover fine-grained temporal and spatial scales. Because of these characteristics, these data are sometimes considered authoritative. \nSome of the common sources of “new school”  spatial data include: \n\nSocial Media and User-Generated Content\n\nGeotagged photos \nCheck-ins or location tags \nReviews or comments with location context (e.g. Yelp, Google Reviews)\n\nMobility and Location Data\n\nSmartphone GPS data (from apps or system services)\nCell tower and Wi-Fi data\nRide-sharing and transit service data\n\nCommercial and Transactional Data\n\nCredit/debit card transactions\nRetail foot traffic and store visit data\nE-commerce delivery and logistics data\n\nSensor and IoT Data\n\nSmart city sensors (traffic cameras, parking sensors)\nWearable devices (fitness trackers, health monitors)\nEnvironmental sensors (temperature, air quality, noise)\n\nImagery and Remote Sensing Data (non-governmental)\n\nSatellite imagery from private companies (e.g., Planet Labs, Maxar)\nDrone-collected imagery",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "4.2 New School Spatial Data",
+    "text": "4.2 New School Spatial Data\nIncreasingly, spatial data are generated by non-traditional sources, including individuals, private companies, and automated systems. These data often come as a by-product of everyday activity, social interactions, or commercial operations. They tend to be high-volume, frequently updated, and cover fine-grained temporal and spatial scales. Because of these characteristics, these data are sometimes considered authoritative. \nSome of the common sources of “new school”  spatial data include: \n\nSocial Media and User-Generated Content\n\nGeotagged photos \nCheck-ins or location tags \nReviews or comments with location context (e.g. Yelp, Google Reviews)\n\nMobility and Location Data\n\nSmartphone GPS data (from apps or system services)\nCell tower and Wi-Fi data\nRide-sharing and transit service data\n\nCommercial and Transactional Data\n\nCredit/debit card transactions\nRetail foot traffic and store visit data\nE-commerce delivery and logistics data\n\nSensor and IoT Data\n\nSmart city sensors (traffic cameras, parking sensors)\nWearable devices (fitness trackers, health monitors)\nEnvironmental sensors (temperature, air quality, noise)\n\nImagery and Remote Sensing Data (non-governmental)\n\nSatellite imagery from private companies (e.g., Planet Labs, Maxar)\nDrone-collected imagery",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#crowdsourced-spatial-data",
     "href": "intro.html#crowdsourced-spatial-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "3.3 Crowdsourced Spatial Data",
-    "text": "3.3 Crowdsourced Spatial Data\nCollecting spatial data is now easier than ever since almost every smartphone has a built-in GPS.  Intentional spatial data collection by non-experts is often called crowdsourced data. Crowdsourced or community-collected geospatial data has become an increasingly important way to capture information that is intentionally or unintentionally missed by “authoritative” sources. These grassroots efforts often seek to fill data gaps that disproportionately affect marginalized communities. Some well-known examples of crowdsourced data include:\n\nOpenStreetMap: A free, crowdsourced map of the world built by millions of contributors, widely used in humanitarian efforts and mapping underserved areas.\nMapillary: A platform where users upload street-level imagery to support navigation, urban development, and computer vision training.\neBird: A citizen science project where birdwatchers record sightings, contributing to biodiversity monitoring and conservation.\niNaturalist: A platform where people document observations of plants and animals, helping scientists track species distribution and ecological change.\n\nREFLECT: The rise of crowdsourced data has created tension between official and unofficial sources of spatial data. What might this tension tell us about the role of power in data production?",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "4.3 Crowdsourced Spatial Data",
+    "text": "4.3 Crowdsourced Spatial Data\nCollecting spatial data is now easier than ever since almost every smartphone has a built-in GPS.  Intentional spatial data collection by non-experts is often called crowdsourced data. Crowdsourced or community-collected geospatial data has become an increasingly important way to capture information that is intentionally or unintentionally missed by “authoritative” sources. These grassroots efforts often seek to fill data gaps that disproportionately affect marginalized communities. Some well-known examples of crowdsourced data include:\n\nOpenStreetMap: A free, crowdsourced map of the world built by millions of contributors, widely used in humanitarian efforts and mapping underserved areas.\nMapillary: A platform where users upload street-level imagery to support navigation, urban development, and computer vision training.\neBird: A citizen science project where birdwatchers record sightings, contributing to biodiversity monitoring and conservation.\niNaturalist: A platform where people document observations of plants and animals, helping scientists track species distribution and ecological change.\n\nREFLECT: The rise of crowdsourced data has created tension between official and unofficial sources of spatial data. What might this tension tell us about the role of power in data production?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#unmarked-point-data",
     "href": "intro.html#unmarked-point-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "4.1 Unmarked Point Data",
-    "text": "4.1 Unmarked Point Data\nUnmarked point data consist of points that represent the locations of events or objects, but do not have any additional attributes. In these data, the location itself is inherently meaningful because it is the primary information being captured. Examples include the locations of trees in a park, streetlights along a road, or car accident sites.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "5.1 Unmarked Point Data",
+    "text": "5.1 Unmarked Point Data\nUnmarked point data consist of points that represent the locations of events or objects, but do not have any additional attributes. In these data, the location itself is inherently meaningful because it is the primary information being captured. Examples include the locations of trees in a park, streetlights along a road, or car accident sites.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#marked-point-data",
     "href": "intro.html#marked-point-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "4.2 Marked Point Data",
-    "text": "4.2 Marked Point Data\nMarked point data consist of points that represent locations with associated attributes or “marks”, which provide additional information about the feature at that location. For example, earthquake epicenters may include magnitude, houses may have assessed property values, or restaurants may include ratings. In this type of data, the location may or may not be meaningful depending on the context. For phenomena like earthquakes or crime, the location itself is important, while for features like weather stations, the location is primarily where the measurement occurs, and the focus is on the attributes.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "5.2 Marked Point Data",
+    "text": "5.2 Marked Point Data\nMarked point data consist of points that represent locations with associated attributes or “marks”, which provide additional information about the feature at that location. For example, earthquake epicenters may include magnitude, houses may have assessed property values, or restaurants may include ratings. In this type of data, the location may or may not be meaningful depending on the context. For phenomena like earthquakes or crime, the location itself is important, while for features like weather stations, the location is primarily where the measurement occurs, and the focus is on the attributes.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#areal-data",
     "href": "intro.html#areal-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "4.3 Areal Data",
-    "text": "4.3 Areal Data\nAreal data represent spatial features as areas or zones. In some cases, the boundaries themselves are meaningful, such as countries, where the delineation reflects real-world separation. In other cases, the areas are arbitrary aggregations created for analysis purposes, such as census tracts or block groups, where the exact location within the area is not meaningful, but the attributes assigned to the area (e.g., population, income) are.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "5.3 Areal Data",
+    "text": "5.3 Areal Data\nAreal data represent spatial features as areas or zones. In some cases, the boundaries themselves are meaningful, such as countries, where the delineation reflects real-world separation. In other cases, the areas are arbitrary aggregations created for analysis purposes, such as census tracts or block groups, where the exact location within the area is not meaningful, but the attributes assigned to the area (e.g., population, income) are.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#continuous-surfaces",
     "href": "intro.html#continuous-surfaces",
-    "title": "1  Introduction to Spatial Data",
-    "section": "4.4 Continuous Surfaces",
-    "text": "4.4 Continuous Surfaces\nContinuous surfaces represent phenomena that vary continuously across space and are usually stored in a grid format, where each cell contains a value. In this type of data, the location of individual cells is not inherently meaningful, but the values themselves describe a property of the landscape or environment at that position. Examples include temperature or rainfall maps, digital elevation models, and air pollution concentrations. \nREFLECT: Consider the case study of forest fires in Western North Carolina. What would be an example of each category of spatial data that might be useful for analyzing residential risk to forest fires?",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "5.4 Continuous Surfaces",
+    "text": "5.4 Continuous Surfaces\nContinuous surfaces represent phenomena that vary continuously across space and are usually stored in a grid format, where each cell contains a value. In this type of data, the location of individual cells is not inherently meaningful, but the values themselves describe a property of the landscape or environment at that position. Examples include temperature or rainfall maps, digital elevation models, and air pollution concentrations. \nREFLECT: Consider the case study of forest fires in Western North Carolina. What would be an example of each category of spatial data that might be useful for analyzing residential risk to forest fires?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#vector-data",
     "href": "intro.html#vector-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "5.1 Vector data",
-    "text": "5.1 Vector data\nVector data is built around geometries, which are encoded into the file. The most basic geometry type is a point. A point is represented as a single coordinate pair (x, y).\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nPoints can then be combined to create lines and polygons. To create a line, at least two distinct points must be connected.\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nA polygon is created when three or more points are connected which means the starting and ending coordinate pairs must be the same. Of the three basic geometric primitives (point, line, polygon), only polygons have an area.\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nWith vector data, resolution is defined by several conditions: \n\nThe precision of the coordinates\nThe complexity of the shape (for instance, how many vertices are used to represent the feature)\nThe minimum mapping unit (MMU). This represents the smallest feature that would be included in the dataset\n\nREFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "6.1 Vector data",
+    "text": "6.1 Vector data\nVector data is built around geometries, which are encoded into the file. The most basic geometry type is a point. A point is represented as a single coordinate pair (x, y).\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nPoints can then be combined to create lines and polygons. To create a line, at least two distinct points must be connected.\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nA polygon is created when three or more points are connected which means the starting and ending coordinate pairs must be the same. Of the three basic geometric primitives (point, line, polygon), only polygons have an area.\n\n\n\nFrom: Intro to GIS and Spatial Analysis\n\n\nWith vector data, resolution is defined by several conditions: \n\nThe precision of the coordinates\nThe complexity of the shape (for instance, how many vertices are used to represent the feature)\nThe minimum mapping unit (MMU). This represents the smallest feature that would be included in the dataset\n\nREFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#common-vector-data-file-types",
     "href": "intro.html#common-vector-data-file-types",
-    "title": "1  Introduction to Spatial Data",
-    "section": "5.2 Common Vector Data File Types",
-    "text": "5.2 Common Vector Data File Types\nShapefile (.shp): By far, the most common vector data file type you’ll encounter when accessing geospatial data is the Shapefile (.shp). This format, which is semi-proprietary (structured and maintained by ESRI), has become the dominant standard. This is not because it offers superior functionality, but because of ESRI’s early dominance in the GIS software market. Shapefiles are a non-topological format made up of several files, including the .shp (geometry), .shx (shape index), .dbf (attribute table), .prj (projection), and sometimes others. \nGeoPackage (.gpkg): GeoPackage is a relatively modern, open-source format developed by the Open Geospatial Consortium (OGC). Built on SQLite, it allows multiple layers and attribute tables to exist within a single .gpkg file, streamlining data management and reducing file clutter. This structure also supports more advanced querying, similar to what’s possible in a relational database– for example, joining attribute tables, filtering by SQL expressions, or performing spatial queries within the file itself. \nGeoJSON (.geojson): GeoJSON is a lightweight, text-based format for encoding vector features using JavaScript Object Notation (JSON). It is especially popular in web mapping environments, where its structure is easily parsed by browsers and APIs. GeoJSON is limited to WGS84 coordinates. \nFile Geodatabase (.gdb):The File Geodatabase is a high-capacity, high-performance format developed by ESRI for use with ArcGIS. It stores vector data, rasters, attribute tables, topological rules, subtypes, and more in a structured folder system. This format supports large datasets (into the terabytes), long field names, and complex relationships between layers. While it’s proprietary and not natively supported by all software, it provides powerful data management and analysis capabilities within the ESRI ecosystem. \nREFLECT: Despite their ubiquity, shapefiles come with serious limitations: a maximum file size of 2 GB, field names limited to 10 characters, and a maximum of 255 fields. Many believe, myself included, that Shapefile must die! What are some potential benefits of using an open source data format compared to an ESRI product?",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "6.2 Common Vector Data File Types",
+    "text": "6.2 Common Vector Data File Types\nShapefile (.shp): By far, the most common vector data file type you’ll encounter when accessing geospatial data is the Shapefile (.shp). This format, which is semi-proprietary (structured and maintained by ESRI), has become the dominant standard. This is not because it offers superior functionality, but because of ESRI’s early dominance in the GIS software market. Shapefiles are a non-topological format made up of several files, including the .shp (geometry), .shx (shape index), .dbf (attribute table), .prj (projection), and sometimes others. \nGeoPackage (.gpkg): GeoPackage is a relatively modern, open-source format developed by the Open Geospatial Consortium (OGC). Built on SQLite, it allows multiple layers and attribute tables to exist within a single .gpkg file, streamlining data management and reducing file clutter. This structure also supports more advanced querying, similar to what’s possible in a relational database– for example, joining attribute tables, filtering by SQL expressions, or performing spatial queries within the file itself. \nGeoJSON (.geojson): GeoJSON is a lightweight, text-based format for encoding vector features using JavaScript Object Notation (JSON). It is especially popular in web mapping environments, where its structure is easily parsed by browsers and APIs. GeoJSON is limited to WGS84 coordinates. \nFile Geodatabase (.gdb):The File Geodatabase is a high-capacity, high-performance format developed by ESRI for use with ArcGIS. It stores vector data, rasters, attribute tables, topological rules, subtypes, and more in a structured folder system. This format supports large datasets (into the terabytes), long field names, and complex relationships between layers. While it’s proprietary and not natively supported by all software, it provides powerful data management and analysis capabilities within the ESRI ecosystem. \nREFLECT: Despite their ubiquity, shapefiles come with serious limitations: a maximum file size of 2 GB, field names limited to 10 characters, and a maximum of 255 fields. Many believe, myself included, that Shapefile must die! What are some potential benefits of using an open source data format compared to an ESRI product?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#raster-data",
     "href": "intro.html#raster-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "5.3 Raster Data",
-    "text": "5.3 Raster Data\nIn a raster model, real-life features are represented as an array of pixels. Instead of distinct geometries, a raster is made up of regularly spaced pixels of identical sizes, and each pixel is associated with a value. \n\n\n\nFrom: Intro to GIS and Spatial Analysis",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "6.3 Raster Data",
+    "text": "6.3 Raster Data\nIn a raster model, real-life features are represented as an array of pixels. Instead of distinct geometries, a raster is made up of regularly spaced pixels of identical sizes, and each pixel is associated with a value. \n\n\n\nFrom: Intro to GIS and Spatial Analysis",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#resolution-in-raster-data",
     "href": "intro.html#resolution-in-raster-data",
-    "title": "1  Introduction to Spatial Data",
-    "section": "5.4 Resolution in Raster Data",
-    "text": "5.4 Resolution in Raster Data\nIn raster data, resolution refers to the size of each pixel, typically expressed in ground units (e.g., feet or meters). Smaller pixels mean higher resolution, capturing more detail. Most raster sources, such as satellite imagery, have fixed native resolutions determined by the sensor’s capabilities.\n\n\n\nIntro to GIS and Spatial Analysis\n\n\nREFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "6.4 Resolution in Raster Data",
+    "text": "6.4 Resolution in Raster Data\nIn raster data, resolution refers to the size of each pixel, typically expressed in ground units (e.g., feet or meters). Smaller pixels mean higher resolution, capturing more detail. Most raster sources, such as satellite imagery, have fixed native resolutions determined by the sensor’s capabilities.\n\n\n\nIntro to GIS and Spatial Analysis\n\n\nREFLECT: Resolution can impact the types of questions we can ask of our spatial data. Come up with an example of a research question and an example dataset where there would be a resolution mismatch.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#common-raster-data-file-types",
     "href": "intro.html#common-raster-data-file-types",
-    "title": "1  Introduction to Spatial Data",
-    "section": "5.5 Common Raster Data File Types",
-    "text": "5.5 Common Raster Data File Types\nGeoTIFF (.tif): GeoTIFF is the most widely used raster data format for geospatial applications. It’s a standard TIFF image that includes embedded geographic metadata (like coordinate system, bounds, and resolution), making it easy to georeference. GeoTIFFs are versatile, lossless, and widely supported across GIS platforms. They can store single-band or multi-band imagery, making them suitable for satellite images, elevation data, and classified rasters.\nNetCDF (.nc): NetCDF (Network Common Data Form) is a format commonly used for storing multidimensional scientific data, such as climate variables or oceanographic models. It supports time-series rasters, multiple dimensions (e.g., x, y, time, depth), and internal compression. NetCDFs are favored in academic and environmental modeling contexts, but can be complex to manage without specialized tools.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "6.5 Common Raster Data File Types",
+    "text": "6.5 Common Raster Data File Types\nGeoTIFF (.tif): GeoTIFF is the most widely used raster data format for geospatial applications. It’s a standard TIFF image that includes embedded geographic metadata (like coordinate system, bounds, and resolution), making it easy to georeference. GeoTIFFs are versatile, lossless, and widely supported across GIS platforms. They can store single-band or multi-band imagery, making them suitable for satellite images, elevation data, and classified rasters.\nNetCDF (.nc): NetCDF (Network Common Data Form) is a format commonly used for storing multidimensional scientific data, such as climate variables or oceanographic models. It supports time-series rasters, multiple dimensions (e.g., x, y, time, depth), and internal compression. NetCDFs are favored in academic and environmental modeling contexts, but can be complex to manage without specialized tools.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#spatial-dependence",
     "href": "intro.html#spatial-dependence",
-    "title": "1  Introduction to Spatial Data",
-    "section": "6.1 Spatial Dependence",
-    "text": "6.1 Spatial Dependence\nTobler’s First Law of Geography states that “everything is related to everything else, but near things are more related than distant things”. Spatial dependence arises because the value of a variable at one location is often influenced by nearby locations. Spatial dependence contributes to spatial patterns, which describes the structures and patterns that emerge between spatial phenomena, and can be quantified using measures of spatial autocorrelation. \nThere are several general processes that cause spatial dependence:\n\nSpatial defusion (spillover effects)\n\nMany phenomena spread across space from one location to nearby locations. For example, a new housing development or commercial center may increase property values in surrounding neighborhoods\n\nEnvironmental or Physical Constraints\n\nThe environment itself can create spatial dependence. For example, elevation and slope affect where houses can be built and climate determines vegetation zones\n\nSocial, Economic, or Cultural Processes\n\nHuman behavior is often spatially organized because interactions are strongest among nearby individuals. People tend to live near others with similar socioeconomic status, cultural preferences, or lifestyles, which creates clusters of similar social and economic characteristics across space\n\nUncaptured Spatially Structured Variables\n\nSometimes the variable we’re studying is influenced (see spatial processes) by other factors that also vary across space, but those factors are not measured.For example, air pollution levels in a city might be affected by traffic volume, industrial activity, and local wind patterns. Because these unmeasured factors are spatially structured, nearby locations often have similar pollution levels, creating spatial autocorrelation.\n\n\nREFLECT: For all of the process types above, come up with an additional example\nSpatial autocorrelation can be strongly positive (which results in a clustered pattern), weak (which results in a random spatial pattern), or strongly negative (which results in a dispersed pattern). \nThe map below shows median home value by census tract in the Triangle region of North Carolina. This is an example of areal spatial data without meaningful boundaries, which means that we are interpreting how values, not locations, are associated with each other. Looking at this map, we can determine that there are clear clusters of positive and negative values (i.e. median home value is more similar to nearer locations). However, we are not able to determine the strength of this spatial autocorrelation just using the map, this requires more advanced methodologies. \n\n\n\nMedian Home Value Across the Triangle\n\n\nIn contrast, many species distributions, especially of territorial species, result in a dispersed spatial pattern. Individuals or groups maintain a certain distance from one another to reduce competition for resources such as food, nesting sites, or mating opportunities. Examples include wolves, foxes, and certain bird species, where each territory is spaced to minimize overlap with neighbors.\nIf spatial autocorrelation is weak, it means that nearby locations are not consistently similar or dissimilar. This can happen when the underlying process is essentially random, when the factors influencing it are not spatially structured, or when multiple processes with opposing effects cancel each other out. Measurement or scale issues can also weaken apparent spatial dependence; for example, aggregating data over large regions can mask local patterns, making the distribution appear random.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "7.1 Spatial Dependence",
+    "text": "7.1 Spatial Dependence\nTobler’s First Law of Geography states that “everything is related to everything else, but near things are more related than distant things”. Spatial dependence arises because the value of a variable at one location is often influenced by nearby locations. Spatial dependence contributes to spatial patterns, which describes the structures and patterns that emerge between spatial phenomena, and can be quantified using measures of spatial autocorrelation. \nThere are several general processes that cause spatial dependence:\n\nSpatial defusion (spillover effects)\n\nMany phenomena spread across space from one location to nearby locations. For example, a new housing development or commercial center may increase property values in surrounding neighborhoods\n\nEnvironmental or Physical Constraints\n\nThe environment itself can create spatial dependence. For example, elevation and slope affect where houses can be built and climate determines vegetation zones\n\nSocial, Economic, or Cultural Processes\n\nHuman behavior is often spatially organized because interactions are strongest among nearby individuals. People tend to live near others with similar socioeconomic status, cultural preferences, or lifestyles, which creates clusters of similar social and economic characteristics across space\n\nUncaptured Spatially Structured Variables\n\nSometimes the variable we’re studying is influenced (see spatial processes) by other factors that also vary across space, but those factors are not measured.For example, air pollution levels in a city might be affected by traffic volume, industrial activity, and local wind patterns. Because these unmeasured factors are spatially structured, nearby locations often have similar pollution levels, creating spatial autocorrelation.\n\n\nREFLECT: For all of the process types above, come up with an additional example\nSpatial autocorrelation can be strongly positive (which results in a clustered pattern), weak (which results in a random spatial pattern), or strongly negative (which results in a dispersed pattern). \nThe map below shows median home value by census tract in the Triangle region of North Carolina. This is an example of areal spatial data without meaningful boundaries, which means that we are interpreting how values, not locations, are associated with each other. Looking at this map, we can determine that there are clear clusters of positive and negative values (i.e. median home value is more similar to nearer locations). However, we are not able to determine the strength of this spatial autocorrelation just using the map, this requires more advanced methodologies. \n\n\n\nMedian Home Value Across the Triangle\n\n\nIn contrast, many species distributions, especially of territorial species, result in a dispersed spatial pattern. Individuals or groups maintain a certain distance from one another to reduce competition for resources such as food, nesting sites, or mating opportunities. Examples include wolves, foxes, and certain bird species, where each territory is spaced to minimize overlap with neighbors.\nIf spatial autocorrelation is weak, it means that nearby locations are not consistently similar or dissimilar. This can happen when the underlying process is essentially random, when the factors influencing it are not spatially structured, or when multiple processes with opposing effects cancel each other out. Measurement or scale issues can also weaken apparent spatial dependence; for example, aggregating data over large regions can mask local patterns, making the distribution appear random.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#spatial-non-stationarity",
     "href": "intro.html#spatial-non-stationarity",
-    "title": "1  Introduction to Spatial Data",
-    "section": "6.2 Spatial Non-Stationarity",
-    "text": "6.2 Spatial Non-Stationarity\nSpatial patterns are caused by a combination of non-spatial and spatial processes. A spatial process is a mechanism, or set of mechanisms, that operate through space. This means that the location, proximity, or connectivity of features matters for how the process operates (i.e. the process itself DEPENDS on spatial relationships).  This differs fundamentally from a non-spatial process, in which the outcome is independent of location or spatial arrangement. \nTaking our example of median home value, we could consider several potential spatial processes that result in the clustered spatial pattern– proximity effects (value of a home is influenced by nearby properties) and accessibility (homes closer to transit, downtown areas, or commercial hubs are more valuable). However, the pattern will also be influenced by non-spatial processes, such as home size, home age, and home quality. \nWhat is important to note about spatial processes is that they are non-stationary. This means that the way that a process operates can change across space, which means that the relationships, mechanisms, or effects observed in one location might not be the same in another location. Recognizing non-stationarity is crucial for spatial analysis because it means that models that assume a uniform process (global models) might not accurately capture spatial dynamics. \nGoing back to our example of home value, one hypothesized spatial process would be proximity to employment. We can use a Geographically Weighted Regression to explore how the relationship between these two variables vary across space. A geographically weighted regression creates a local regression model for each location by using nearby observations weighted by distance. We can use average commute as a proxy for proximity to major employment centers. The map below shows the coefficient of the GWR at different locations across the Triangle. This coefficient represents the local association between commute time and median home value, indicating how the relationship differs between the urban core and surrounding suburban areas. Negative coefficients in the central city suggest that longer commute times are associated with lower home values, reflecting the premium placed on accessibility, while positive coefficients in suburban areas suggest that longer commutes are associated with higher home values, likely capturing trade-offs between housing size, affordability, and distance from employment centers.\n\n\n\nLocal Coefficient of GWR (Commute ~ Home Value)\n\n\nREFLECT: Residential tree canopy cover is another spatial pattern that is usually clustered. Hypothesize on some non-spatial and spatial processes that might contribute to clustering, and how they might be non-stationary.",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "7.2 Spatial Non-Stationarity",
+    "text": "7.2 Spatial Non-Stationarity\nSpatial patterns are caused by a combination of non-spatial and spatial processes. A spatial process is a mechanism, or set of mechanisms, that operate through space. This means that the location, proximity, or connectivity of features matters for how the process operates (i.e. the process itself DEPENDS on spatial relationships).  This differs fundamentally from a non-spatial process, in which the outcome is independent of location or spatial arrangement. \nTaking our example of median home value, we could consider several potential spatial processes that result in the clustered spatial pattern– proximity effects (value of a home is influenced by nearby properties) and accessibility (homes closer to transit, downtown areas, or commercial hubs are more valuable). However, the pattern will also be influenced by non-spatial processes, such as home size, home age, and home quality. \nWhat is important to note about spatial processes is that they are non-stationary. This means that the way that a process operates can change across space, which means that the relationships, mechanisms, or effects observed in one location might not be the same in another location. Recognizing non-stationarity is crucial for spatial analysis because it means that models that assume a uniform process (global models) might not accurately capture spatial dynamics. \nGoing back to our example of home value, one hypothesized spatial process would be proximity to employment. We can use a Geographically Weighted Regression to explore how the relationship between these two variables vary across space. A geographically weighted regression creates a local regression model for each location by using nearby observations weighted by distance. We can use average commute as a proxy for proximity to major employment centers. The map below shows the coefficient of the GWR at different locations across the Triangle. This coefficient represents the local association between commute time and median home value, indicating how the relationship differs between the urban core and surrounding suburban areas. Negative coefficients in the central city suggest that longer commute times are associated with lower home values, reflecting the premium placed on accessibility, while positive coefficients in suburban areas suggest that longer commutes are associated with higher home values, likely capturing trade-offs between housing size, affordability, and distance from employment centers.\n\n\n\nLocal Coefficient of GWR (Commute ~ Home Value)\n\n\nREFLECT: Residential tree canopy cover is another spatial pattern that is usually clustered. Hypothesize on some non-spatial and spatial processes that might contribute to clustering, and how they might be non-stationary.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#scale-effects",
     "href": "intro.html#scale-effects",
-    "title": "1  Introduction to Spatial Data",
-    "section": "6.3 Scale Effects",
-    "text": "6.3 Scale Effects\nSpatial processes also differ across scales. For instance, we can consider that there are spatial processes at the local, city, or state level that might influence home value. At the local level, processes such as neighborhood clustering of high-amenity areas, street connectivity, or proximity to parks can influence home values. At the city level, processes like zoning, transit accessibility, or distribution of commercial centers shape housing prices across neighborhoods. At the state or regional level, spatial processes include the distribution of economic hubs, in-migration, and  regional commuting flow. Because spatial processes differ across scales, analysis must account for scale to accurately capture the mechanisms influencing space.\nREFLECT: Think about tree canopy coverage at different scales (neighborhood, city, county). How might the spatial processes differ across scales?",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "7.3 Scale Effects",
+    "text": "7.3 Scale Effects\nSpatial processes also differ across scales. For instance, we can consider that there are spatial processes at the local, city, or state level that might influence home value. At the local level, processes such as neighborhood clustering of high-amenity areas, street connectivity, or proximity to parks can influence home values. At the city level, processes like zoning, transit accessibility, or distribution of commercial centers shape housing prices across neighborhoods. At the state or regional level, spatial processes include the distribution of economic hubs, in-migration, and  regional commuting flow. Because spatial processes differ across scales, analysis must account for scale to accurately capture the mechanisms influencing space.\nREFLECT: Think about tree canopy coverage at different scales (neighborhood, city, county). How might the spatial processes differ across scales?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
     "objectID": "intro.html#special-issues-modifiable-areal-unit-problem",
     "href": "intro.html#special-issues-modifiable-areal-unit-problem",
-    "title": "1  Introduction to Spatial Data",
-    "section": "6.4 Special Issues: Modifiable Areal Unit Problem",
-    "text": "6.4 Special Issues: Modifiable Areal Unit Problem\nIndividual (or point-level) spatial data is often aggregated to areal units. This happens for several reasons:\n\nPrivacy\n\nAggregating data protects sensitive information about individuals by reporting only summary values for larger areas\n\nData availability\n\nSome data are only measured or published at aggregated levels\n\nAnalytical convenience\n\nAggregating data reduces complexity and makes spatial analysis more computationally manageable\n\nAlignment with policy or planning units\n\n Many decisions (for instance, in urban planning, public health, or transportation) are made at administrative or political boundaries\n\n\nWhile aggregating data is often necessary or useful, it introduces the Modifiable Areal Unit Problem (MAUP), where the choice of spatial units (size or boundaries) can influence statistical results and spatial patterns. These results can change significantly depending on how the boundaries are drawn (zone effect) and how large or small the units are (scale effect).\nConsider the summary statistics for percent poverty across North Carolina zip codes vs. counties to see the impact of the scale effect:\n\n\n\nAggregation Unit\nMean \nMedian\nMin\nMax\nSt. Dev\n\n\nZip Code\n25.33\n23.76\n0\n100\n13.82\n\n\nCounty\n26.46\n25.48\n12.34\n40.83\n6.58\n\n\n\nAggregating data into larger units can smooth out local variation and reduce variability. For example, comparing the standard deviation at the zip code (13.82) to the county (6.58) shows that smaller units capture more heterogeneity. \nBecause of the MAUP, we need to be careful when interpreting aggregated data, given that patterns observed at one scale or within a particular zoning scheme may not hold at another. Since spatial patterns are often scale-dependent, one way to mitigate the effects of the MAUP is to align the selection of areal units with the hypothesized scale of the underlying process. Robustness can also be assessed by comparing results across similar spatial units– for example, examining patterns at the census block group level versus the census tract level, or testing slightly different zoning schemes. Additionally, advanced methods such as hierarchical or multiscale modeling can explicitly account for variations across scales, providing a more accurate understanding of spatial dynamics.\nREFLECT: Consider the research question: To what extent does socioeconomic status determine a neighborhood’s proximity to a full-service grocery store? What would be concerns about how the MAUP might affect our analysis, and how could we minimize the MAUP?",
+    "title": "1  Introduction to Spatial Data/ HW#1",
+    "section": "7.4 Special Issues: Modifiable Areal Unit Problem",
+    "text": "7.4 Special Issues: Modifiable Areal Unit Problem\nIndividual (or point-level) spatial data is often aggregated to areal units. This happens for several reasons:\n\nPrivacy\n\nAggregating data protects sensitive information about individuals by reporting only summary values for larger areas\n\nData availability\n\nSome data are only measured or published at aggregated levels\n\nAnalytical convenience\n\nAggregating data reduces complexity and makes spatial analysis more computationally manageable\n\nAlignment with policy or planning units\n\n Many decisions (for instance, in urban planning, public health, or transportation) are made at administrative or political boundaries\n\n\nWhile aggregating data is often necessary or useful, it introduces the Modifiable Areal Unit Problem (MAUP), where the choice of spatial units (size or boundaries) can influence statistical results and spatial patterns. These results can change significantly depending on how the boundaries are drawn (zone effect) and how large or small the units are (scale effect).\nConsider the summary statistics for percent poverty across North Carolina zip codes vs. counties to see the impact of the scale effect:\n\n\n\nAggregation Unit\nMean \nMedian\nMin\nMax\nSt. Dev\n\n\nZip Code\n25.33\n23.76\n0\n100\n13.82\n\n\nCounty\n26.46\n25.48\n12.34\n40.83\n6.58\n\n\n\nAggregating data into larger units can smooth out local variation and reduce variability. For example, comparing the standard deviation at the zip code (13.82) to the county (6.58) shows that smaller units capture more heterogeneity. \nBecause of the MAUP, we need to be careful when interpreting aggregated data, given that patterns observed at one scale or within a particular zoning scheme may not hold at another. Since spatial patterns are often scale-dependent, one way to mitigate the effects of the MAUP is to align the selection of areal units with the hypothesized scale of the underlying process. Robustness can also be assessed by comparing results across similar spatial units– for example, examining patterns at the census block group level versus the census tract level, or testing slightly different zoning schemes. Additionally, advanced methods such as hierarchical or multiscale modeling can explicitly account for variations across scales, providing a more accurate understanding of spatial dynamics.\nREFLECT: Consider the research question: To what extent does socioeconomic status determine a neighborhood’s proximity to a full-service grocery store? What would be concerns about how the MAUP might affect our analysis, and how could we minimize the MAUP?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Spatial Data/ HW#1</span>"
     ]
   },
   {
@@ -207,6 +207,406 @@
     "text": "2.2 Hypothesizing Spatial Processes\nFor each of the following case studies:\n\nEMS Response times by US County\nELA Proficiency by North Carolina School District\nUrban Heat Islands in Durham, NC\n\nConsider the spatial pattern. Remember that later in the class we will use tests to determine if a spatial pattern exists. For now, use visual interpretation. Describe whether the pattern seems clustered, dispersed, or random. Then hypothesize on both spatial and non-spatial processes that could contribute to generating the pattern. Consider how the pattern might change at different scales, and identify which processes might be the most relevant at different scales. Finally, reflect on non-stationarity– whether the same process could operate differently in different locations.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Group Workshop: Spatial Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html",
+    "href": "tmap.html",
+    "title": "4  Tutorial: Tmap",
+    "section": "",
+    "text": "4.1 Visual Variables\nYou will not turn in this tutorial. This tutorial is designed as an ungraded contact-time activity that allows you to gain the skills necessary to create maps in this course.\nIn this tutorial, you will explore more advanced features of the tmap mapping package in R. This tutorial does not cover everything. For much more information on making good maps in tmap, this is a great resource: Spatial Data Visualization with tmap\nAfter completing these exercises, you should be able to:\nWe will use an NC county boundary and Durham schools data to practice our tmap visualization. As you move through the tutorial, copy and paste the commands into your own .Rmd file.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#visual-variables",
+    "href": "tmap.html#visual-variables",
+    "title": "4  Tutorial: Tmap",
+    "section": "",
+    "text": "4.1.1 Color\nWe are already familiar with making a basic tmap using color to visualize patterns:\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\")\n\n\n\n\n\n\n\n\n\n\n4.1.2 Size\nWe can also represent variables by size\n\ntm_shape(nc_counties) + tm_symbols(size = \"POP2020\")\n\n\n\n\n\n\n\n\n\n\n4.1.3 Size and Color\nOr both!\n\ntm_shape(nc_counties) + tm_symbols(size = \"POP2020\", fill = \"POP2020\")\n\n\n\n\n\n\n\n\n\n\n4.1.4 Shape\nFor categorical variables, we can also use shape\n\n#with symbols there are a default of 5 symbols. If you have more than 5 categories, you need to specify which shapes to use using the shape.scale() argument\ntm_shape(durham_schools) + tm_symbols(shape = \"factype\", shape.scale = tm_scale(values = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)))",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#color-palettes",
+    "href": "tmap.html#color-palettes",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.2 Color Palettes",
+    "text": "4.2 Color Palettes\nWe can also modify the color palette. To see all the available color palettes, you should run the command below\n\ncols4all::c4a_gui()\n\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\", fill.scale = tm_scale_intervals(values = \"bu_pu\"))",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#classification-schemes",
+    "href": "tmap.html#classification-schemes",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.3 Classification Schemes",
+    "text": "4.3 Classification Schemes\nOne of the biggest decisions we can make is how to classify our data. You can see in the maps above that tmap defaults to an equal interval color scheme. However, this is often not the best way to classify the data. Your decision about classification should be made based on the distribution of the data. Let’s look at the distribution of the median age variable\n\nggplot(nc_counties, aes(x = POP2020)) + geom_histogram()\n\n\n\n\n\n\n\n\nBecause so much of our variation is between below 200,000, using an equal interval color palette makes it difficult to visualize the majority of the variation. See how different the map looks when we use a quantile classification scheme?\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\", fill.scale = tm_scale_intervals(values = \"bu_pu\", style = \"quantile\"))\n\n\n\n\n\n\n\n\nThe following classification schemes will cover most of your uses:\n\nequal\npretty\nquantile\nfisher (natural breaks)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#interactive-mapping",
+    "href": "tmap.html#interactive-mapping",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.4 Interactive Mapping",
+    "text": "4.4 Interactive Mapping\nSo far, we have only made mostly static maps. However, tmap has the availability to make interactive maps as well.\n\n## make an interactive map\ntmap_mode(mode = \"view\")\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\", fill.scale = tm_scale_intervals(values = \"bu_pu\", style = \"quantile\"))",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#multiple-layers",
+    "href": "tmap.html#multiple-layers",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.5 Multiple Layers",
+    "text": "4.5 Multiple Layers\nYou can add as many layers to a tmap as you want\n\n#turn back to non-interactive\ntmap_mode(\"plot\")\n\ndurham_county &lt;- nc_counties |&gt; filter(NAME == \"Durham\")\ntm_shape(durham_county) + tm_borders() + tm_shape(durham_schools) + tm_dots()",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#formatting",
+    "href": "tmap.html#formatting",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.6 Formatting",
+    "text": "4.6 Formatting\n\n4.6.1 Adding Transparency and additional classes\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\", fill_alpha = .3, fill.scale = tm_scale_intervals(values = \"bu_pu\", style = \"quantile\", n = 7))\n\n\n\n\n\n\n\n\n\n\n4.6.2 Adding a Basemap and a Title\n\ntm_shape(nc_counties) + tm_polygons(fill = \"POP2020\",fill.scale = tm_scale_intervals(values = \"bu_pu\", style = \"quantile\", n = 5), fill_alpha = .3) +\ntm_title(\"Median Age by Census Block Group\") + tm_basemap(\"OpenStreetMap\")\n\n\n\n\n\n\n\n\nThe following basemaps will cover most of your uses:\n\n“CartoDB.VoyagerOnlyLabels” - Labels Only\n“CartoDB.PositronNoLabels”- No Labels\n“OpenStreetMap” - Labeled Basemap\n“Esri.WorldImagery” - Satellite",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#layout",
+    "href": "tmap.html#layout",
+    "title": "4  Tutorial: Tmap",
+    "section": "4.7 Layout",
+    "text": "4.7 Layout\ntmap provides advanced functionality for map formatting, which is explored in greater detail here. For example, we can make substantially improve the formatting of the map above\n\ntm_shape(nc_counties) +\n  tm_polygons(\n    fill = \"POP2020\",\n    fill.scale = tm_scale_intervals(\n      values = \"bu_pu\",\n      style = \"quantile\",\n      n = 5\n    ),\n    fill_alpha = 0.3,\n    fill.legend = tm_legend(\n      position = tm_pos_in(\"left\", \"bottom\"),\n      frame = TRUE,\n      frame.r = 6,\n      bg.color = \"white\",\n      item.height = 0.55,\n      item.width  = 0.55\n    )\n  ) +\n  tm_title(\"2020 Population by NC County\", size = 2) +\n  tm_basemap(\"OpenStreetMap\") +\n  tm_layout(\n    text.fontfamily = \"serif\",\n    frame = TRUE,\n    frame.r = 15\n  )\n\nMultiple palettes called \"bu_pu\" found: \"brewer.bu_pu\", \"matplotlib.bu_pu\". The first one, \"brewer.bu_pu\", is returned.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tutorial: Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "tmap.html#map-competition",
+    "href": "tmap.html#map-competition",
+    "title": "4  Advanced Tmap",
+    "section": "4.8 Map Competition",
+    "text": "4.8 Map Competition\nIn this exercise, you will create a well-designed map that leverages the stylistic and formatting capabilities of the tmap package. You will likely want to add formatting components that we have not explicitly covered. See Spatial Data Visualization with tmap for additional assistance.\n\n4.8.1 Map Prompt: Create a well-designed map of weekend bus serviceability to Chapel Hill parks\n\nch_boundary &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1ievfdMpmrZBO1qBI_uILYpb1XbVXmC0b\")\n\nnum_weekend_buses &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1sm1wakDXNoHQjXHhScH7Q5QdgqRvZTCD\")\n\nparks &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1WfzXK_3NZsll9ov8uD5-9i8ceVMlEUlN\")",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Advanced Tmap</span>"
+    ]
+  },
+  {
+    "objectID": "map_competition.html",
+    "href": "map_competition.html",
+    "title": "7  Group Workshop: Map Competition",
+    "section": "",
+    "text": "7.0.1 Instructions\nThis group workshop is designed to assess ability to apply map design concepts.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Group Workshop: Map Competition</span>"
+    ]
+  },
+  {
+    "objectID": "describing_spatial_data.html",
+    "href": "describing_spatial_data.html",
+    "title": "3  Tutorial: Introduction to Spatial Data",
+    "section": "",
+    "text": "3.1 Getting to Know Spatial Data\nYou will not turn in this tutorial. This tutorial is designed as an ungraded contact-time activity that allows you to gain the skills necessary to complete HW#2.\nIn this tutorial, you will practice working with spatial data formats using the sf (for vector data), sfdep library (spatial statistics), the terra package (for raster data), and tmap (for mapping) packages. After completing these exercises, you should be able to:\nYou will use the following datasets (you do not need to download, these are just links to the original source):\nCreate a new .Rmd document and add the code chunk below to read in the data.\nAdd a first-level header called “Getting to Know Spatial Data”. As you move through the tutorial, copy and paste the commands, making sure each command has a descriptive comment.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tutorial: Introduction to Spatial Data</span>"
+    ]
+  },
+  {
+    "objectID": "describing_spatial_data.html#getting-to-know-spatial-data",
+    "href": "describing_spatial_data.html#getting-to-know-spatial-data",
+    "title": "3  Tutorial: Introduction to Spatial Data",
+    "section": "",
+    "text": "3.1.1 Inspecting Geometry in Vector Data\nAll vector data has a required column, which is almost always named geometry. This column stores the spatial component of each data point (row). We can get a basic understanding of this geometry column by running the following command:\n\n## inspect geometry of tornado dataset\nst_geometry(torn)\n\nQ1: Does this dataset have point, line, or polygon geometries?\nQ2: What is the CRS of this dataset? (you can also find the crs by running the command crs()\n\n\n3.1.2 Inspecting Raster Structure\nRaster data are not structured like tibbles (or vectors). Instead of rows and columns in a table, rasters represent values stored in a regular grid of cells across space. Remember that the attributes of the raster data are stored as the cell value (as opposed to columns in a row). The following\n\n#get resolution of raster data. Remember that the resolution will be in the unit of the CRS. \nres(tree_cover)\n\n[1] 30 30\n\n#get the spatial extent of the raster\next(tree_cover)\n\nSpatExtent : -8807610, -8788650, 4279980, 4307520 (xmin, xmax, ymin, ymax)\n\n#get the crs of the raster\ncrs(tree_cover)\n\n[1] \"PROJCRS[\\\"WGS 84 / Pseudo-Mercator\\\",\\n    BASEGEOGCRS[\\\"WGS 84\\\",\\n        DATUM[\\\"World Geodetic System 1984\\\",\\n            ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,\\n                LENGTHUNIT[\\\"metre\\\",1]]],\\n        PRIMEM[\\\"Greenwich\\\",0,\\n            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],\\n        ID[\\\"EPSG\\\",4326]],\\n    CONVERSION[\\\"unnamed\\\",\\n        METHOD[\\\"Popular Visualisation Pseudo Mercator\\\",\\n            ID[\\\"EPSG\\\",1024]],\\n        PARAMETER[\\\"Latitude of natural origin\\\",0,\\n            ANGLEUNIT[\\\"degree\\\",0.0174532925199433],\\n            ID[\\\"EPSG\\\",8801]],\\n        PARAMETER[\\\"Longitude of natural origin\\\",0,\\n            ANGLEUNIT[\\\"degree\\\",0.0174532925199433],\\n            ID[\\\"EPSG\\\",8802]],\\n        PARAMETER[\\\"False easting\\\",0,\\n            LENGTHUNIT[\\\"metre\\\",1],\\n            ID[\\\"EPSG\\\",8806]],\\n        PARAMETER[\\\"False northing\\\",0,\\n            LENGTHUNIT[\\\"metre\\\",1],\\n            ID[\\\"EPSG\\\",8807]]],\\n    CS[Cartesian,2],\\n        AXIS[\\\"easting (X)\\\",east,\\n            ORDER[1],\\n            LENGTHUNIT[\\\"metre\\\",1]],\\n        AXIS[\\\"northing (Y)\\\",north,\\n            ORDER[2],\\n            LENGTHUNIT[\\\"metre\\\",1]],\\n    USAGE[\\n        SCOPE[\\\"Web mapping and visualisation.\\\"],\\n        AREA[\\\"World between 85.06°S and 85.06°N.\\\"],\\n        BBOX[-85.06,-180,85.06,180]],\\n    ID[\\\"EPSG\\\",3857]]\"\n\n#get the dimensions of the raster\ndim(tree_cover)\n\n[1] 918 632   1\n\n#get a summary of the cell values\nsummary(tree_cover)\n\nWarning: [summary] used a sample\n\n\n NLCD_Percent_Tree_Canopy_Cover\n Min.   : 0.0                  \n 1st Qu.:47.0                  \n Median :82.0                  \n Mean   :65.5                  \n 3rd Qu.:89.0                  \n Max.   :99.0                  \n\n\nQ3: What is the CRS of the raster dataset. What does that tell you about the unit of resolution? (feet, meters, miles)\nQ4: What do our summary statistics tell us about tree cover in Chapel Hill?\n\n\n3.1.3 Making Data Spatial\nOften we have spatial data that is not in an explicitly spatial format (i.e. geojson, shapefile, etc.) but has spatial information in it as columns (a latitude and longitude column). We can easily convert this to a spatial feature in R as long as we know the coordinate system.\nFor instance, we can convert the hospital data from a .csv to spatial features because this dataset has an X and Y column and we know the CRS is 2264 (North Carolina State Plane)\n\n## transform to spatial features\nspatial_hosp &lt;- nc_hosp |&gt; st_as_sf(coords = c(\"X\", \"Y\"), crs = 2264)\n\nQ5: Inspect the geometry column of this dataset\n\n\n3.1.4 Making Basic Maps\nWe will use the tmap package to create maps of our spatial data. Mapping data is a very important component of getting to know our data.\nThe basic tmap formula is:\n\ntm_shape(DATASET) + tm_dots() For point geometries\ntm_shape(DATASET) + tm_polygons() For polygon geometries\n\nTo map a VARIABLE, you will modify your command by putting fill = \"VARIABLE\" in the tm_dots() or tm_polygons()\nWe can make a very basic map of tornado locations using the following command:\n\n#tm_shape references the object, we use tm_dots for points tm_polygons for polygons and tm_lines for lines\ntm_shape(torn) + tm_dots()\n\n\n\n\n\n\n\n##we can plot a variable by adding an argument into our tm_dots command\n## this maps the month the tornado happened\ntm_shape(torn) + tm_dots(fill = \"mo\")\n\n\n\n\n\n\n\n\nQ6: Make a basic map of the spatial_hosp object that displays the number of general beds in each hospital (ngenlic)\nTo map rasters, we use the\n\ntm_shape(tree_cover) + tm_raster()\n\n\n\n\n\n\n\n\nQ7: Can you notice any recognizable features in the raster?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tutorial: Introduction to Spatial Data</span>"
+    ]
+  },
+  {
+    "objectID": "describing_spatial_data.html#spatial-descriptive-statistics",
+    "href": "describing_spatial_data.html#spatial-descriptive-statistics",
+    "title": "3  Tutorial: Introduction to Spatial Data",
+    "section": "3.2 Spatial Descriptive Statistics",
+    "text": "3.2 Spatial Descriptive Statistics\nWith vector-based spatial data, we can expand our descriptive statistics to include spatial descriptive statistics. Combining traditional descriptive statistics with spatial descriptive statistics can expand our understanding of the dataset.\n\n3.2.0.1 Mean Center\nThe mean center of a spatial dataset represents the average location of a set of points and is calculated by taking the average of all the x-coordinates and all the y-coordinates in the dataset.\n\n#calculate mean center of all tornados in dataset\ntorn_mean_center &lt;- center_mean(torn)\n\n#map tornadoes and mean center\ntm_shape(torn) + tm_dots() + tm_shape(torn_mean_center) + tm_dots(fill = \"blue\") + tm_add_legend(\n    type = \"symbols\",\n    labels = \"Mean Center\",\n    fill = \"blue\"\n  )\n\n\n\n\n\n\n\n\nQ8. What does the location of our mean center tell us about the spatial distribution of tornadoes in the United States?\n\n\n3.2.0.2 Weighted Mean Center\nThe weighted mean center calculates the average location, but allows you to select a variable to weight by. The calculation then gives more influence to features with larger values of that variable. For instance, we could give higher weight to fatal tornadoes\n\n## calculate weighted mean center using \"fat\" variable\ntorn_w_mean_center &lt;- center_mean(torn, weight = torn$fat)\n\n\n##map mean center and weighted mean center\ntm_shape(torn) + tm_dots() + tm_shape(torn_mean_center) + tm_dots(fill = \"blue\", ) + tm_shape(torn_w_mean_center) + tm_dots(fill = \"red\") + tm_add_legend(\n    type = \"symbols\",\n    labels = c(\"Mean Center\", \"Weighted Mean Center\"),\n    fill = c(\"blue\", \"red\")\n  )\n\n\n\n\n\n\n\n\nQ9. What does the difference between the mean center and the weighted mean center (weighted by fatalities) tell us about the spatial distribution of fatal tornadoes?\n\n\n3.2.0.3 Standard Deviational Ellipse\nThe standard deviational ellipse is a method for summarizing the spatial central tendency, dispersion, and directional trends. The ellipse visually represents the spread of the data and the direction of the spread. It is centered on the mean center and its axes represent the standard deviation of the x and y coordinates.\n\n#calculate standard ellipse values\nstd_ellip_torn &lt;- std_dev_ellipse(torn)\n\n#create an ellipse of those values\nstd_ellip_torn &lt;- st_ellipse(geometry =std_ellip_torn,\n                                   sx = std_ellip_torn$sx,\n                                   sy = std_ellip_torn$sy,\n                                   rotation = -std_ellip_torn$theta)\n#map the ellipse with transparency\ntm_shape(torn) + tm_dots() + tm_shape(std_ellip_torn) + tm_polygons(fill_alpha = .5)\n\n\n\n\n\n\n\n\n\n\n3.2.1 Mini Challenge\nAdd a new first level header called “Mini-Challenge”. Under that header, add a code chunk. In the code chunk, write commands to do the following:\n\nCreate two objects– one representing all tornadoes before 2000 and one representing all tornadoes after 2000.\nCalculate the weighted mean center (by mag) for tornadoes before and after 2000\nDetermine what this difference tells us about how the spatial pattern of tornadoes has changed over time.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tutorial: Introduction to Spatial Data</span>"
+    ]
+  },
+  {
+    "objectID": "covid.html",
+    "href": "covid.html",
+    "title": "6  Group Workshop: Describing Covid",
+    "section": "",
+    "text": "This group workshop is designed to assess ability to apply spatial descriptive statistics.\n\n6.0.1 Instructions\n\nCreate a new .Rmd named LASTNAME1LASTNAME2.Rmd (include all last names in your group)\nAdd a chunk for loading libraries and reading in data. Add the following code into that chunk:\n\n## load necessary libraries\nlibrary(tidyverse)\nlibrary(gt)\nlibrary(sf)\nlibrary(e1071)\nlibrary(tmap)\nlibrary(maptiles)\nlibrary(spdep)\n\n\n#read in data\n\n##cumulative covid cases and deaths on April 1, 2020\ncovid_deaths_04012020 &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1spBLqVxa25a7FDo7U7aNDJF2t2N0-uXv\")\n\n##cumulative covid cases and deaths on July 1, 2020\ncovid_deaths_07012020 &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1ZNka0ffMXSVAqVDCj1R-oYh37BH9ziAZ\")\n\nAdd “Describing Covid” as a first-level header. In each of the covid datasets, there is a variable named cases which represents the cumulative cases in each county on the given date and a variable named deaths which represents the cumulative deaths in each county on the given date. Note that the dataset only includes counties that had at least one case or death. In this section you will compute descriptive statistics for cases and deaths on each date, compute spatial descriptive statistics, and create a well designed map. Your code chunk should:\n\nCreate a descriptive statistics table of cases and deaths for each dataset\nCompute a weighted mean center for cases and deaths on each date\nCreate a map for the April 2020 data that symbolizes cases by county, as well as the mean center for cases AND deaths. Make sure that you add manual legend entries for the mean center of cases and deaths.\nCreate a map for the July 2020 data that symbolizes cases by county, as well as the mean center for cases AND deaths. Make sure that you add manual legend entries for the mean center of cases and deaths.\n\nBelow your chunk, you should write 1-2 paragraphs that do the following:\n\nSummarize what the descriptive statistics reveal about the distribution of Covid cases and deaths\nExplain why creating a meaningful histogram or boxplot for this data would be challenging\nDescribe what the maps (including the spatial descriptive statistics) reveal about the spatial distribution of Covid cases and deaths.\nExplain why an unweighted mean center isn’t meaningful in this context (consider the unit of observation)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Group Workshop: Describing Covid</span>"
+    ]
+  },
+  {
+    "objectID": "wrangling.html",
+    "href": "wrangling.html",
+    "title": "8  Review: Advanced Tidyverse",
+    "section": "",
+    "text": "8.1 Research Question 1: How does hospital bed availability per capita vary across NC counties?\nThis review is designed to re-introduce commands in the tidyverse package that you should be familiar with for the rest of the course.\nAfter completing these exercises, you should be able to:\nWe will use the following datasets in this chapter:\nTo start, create a new .Rmd document. Add a first-level header called “Reading in Data”. Then add the following code chunk. For each of the research questions below, add an additional header and code chunk.\nQ1: Based on the commands above, which of these datasets are spatial files?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review: Advanced Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "wrangling.html#research-question-1-how-does-hospital-bed-availability-per-capita-vary-across-nc-counties",
+    "href": "wrangling.html#research-question-1-how-does-hospital-bed-availability-per-capita-vary-across-nc-counties",
+    "title": "8  Review: Advanced Tidyverse",
+    "section": "",
+    "text": "8.1.1 Plain Language Summary:\nIn our NC county dataset, each row represents one county. In the hospital dataset, each row represents one hospital, and multiple hospitals can exist within the same county. Because these datasets are organized differently, we can’t compare them directly. To make them compatible, we first need to summarize the hospital data at the county level (aggregation). Then we need to combine the datasets so that we can use fields from both (joining). After we join the datasets, we can create new variables of interest (like number of hospital beds per county resident).\n\n\n8.1.2 Step 1: Aggregating Hospital Data\nTo start, we need to get our hospital data to the county level so it is directly comparable to our county dataset. The workhorse for aggregation in the tidyverse package is the combination of group_by and summarise.\n\n#the group_by command tells tidyverse which column(s) we want to aggregate based on. #the summarise command tells tidyverse how to summarise the data\nsummarised_hospital &lt;- hospitals |&gt; \n  group_by(fcounty) |&gt; \n            #total beds\n  summarise(total_general_beds = sum(hgenlic),\n            #total number of hospitals\n            num_hosp = n(), \n            # total number of hospitals with &gt; 50 gen beds\n            num_large_hosp = sum(hgenlic &gt; 50))\n\nQ2: Write a command to calculate the total number of beds (hgenlic + rehabhlic). You should add a new field in the hospitals dataset (mutate) before grouping and summarizing.\n\n\n8.1.3 Step 2: Joining our Data\nNow, we need to combine our county data with our hospital data. We do this through a table join (left_join). If you are joining spatial and non-spatial data, the spatial data must always be what is joined to. A table join requires a key field. A key field means that the values match between both datasets. The name of the column does not need to match.\n\n#the first argument in the join is the object you want to join, the second is the fields to join by\ncounty_hosp &lt;- nc_counties |&gt; \n  left_join(summarised_hospital, join_by(NAMELSAD == fcounty))\n\nQ3: Open the county_hosp object. Did the join work? How do you know?\nQ4: Can you figure out what’s wrong with our join and fix it? (hint: it has to do with the fields we chose to join by)\n\n\n8.1.4 Step 3: Create our Variable of Interest\nQ5: Using the mutate command on your joined dataset (after you’ve fixed the join), calculate a density metric of hospital beds per 1000 people per county using the formula bed_density = total_beds / (county pop/ 1000)\n\n\n8.1.5 Step 4: Explore our Variable of Interest\nQ6: Make a descriptive statistics table of hospital beds/ 1000 people. Note that there are NAs in the dataset (counties with no hospitals). Your descriptive statistics table will need to use the na.rm = TRUE argument\nQ7: Make one non-map graphic of the variable of interest.\nQ8: Create a map of the variable of interest.\nQ9: What is the spatial pattern of hospital bed density across North Carolina?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review: Advanced Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "wrangling.html#research-question-2-how-does-maximum-temperature-vary-throughout-the-seasons-across-stations-near-chapel-hill-nc",
+    "href": "wrangling.html#research-question-2-how-does-maximum-temperature-vary-throughout-the-seasons-across-stations-near-chapel-hill-nc",
+    "title": "8  Review: Advanced Tidyverse",
+    "section": "8.2 Research Question 2: How does maximum temperature vary throughout the seasons across stations near Chapel Hill, NC?",
+    "text": "8.2 Research Question 2: How does maximum temperature vary throughout the seasons across stations near Chapel Hill, NC?\n\n8.2.1 Plain Language Summary\nIn our ch_temp dataset, each row represents the maximum temperature for a single day per station. We want to temporally aggregate this data so that we, instead, have summary values for each station for each season. Once we have our summary values, we’ll want to “pivot” our data so that instead of having a row for each season per station, we have a row for each station and the seasons are columns. Then, we’ll want to make our data spatial.\n\n\n8.2.2 Step 1: Create a Season Variable\nWe can use the mutate command to add a column that notes the season of each row. tidyverse is very good at working with dates, through the lubridate package included in tidyverse.\n\n#add a season variable by manipulating date\nch_temp &lt;- ch_temp |&gt;\n  mutate(\n    month = month(Date),\n    season = case_when(\n      month == 12 | month &lt; 3  ~ \"Winter\",\n      month &gt;= 3  & month &lt; 6  ~ \"Spring\",\n      month &gt;= 6  & month &lt; 9  ~ \"Summer\",\n      month &gt;= 9  & month &lt; 12 ~ \"Fall\"\n    )\n  )\n\nQ10: What does the case_when command allow us to do?\n\n\n8.2.3 Step 2: Aggregate by Station and Season\nWe can put multiple arguments in the group_by command. If you noticed above, the grouped summary ONLY retains the grouping fields and the summary fields. It removes all other fields. Because we want to make our data spatial later, we will also group by the latitude and longitude fields (since we know that these are identical at each location and we want to use them later on).\n\n#aggregate by station and season\nch_temp_agg &lt;- ch_temp |&gt;\n  group_by(season, Location, Latitude, Longitude) |&gt;\n  summarise(mean = mean(`Maximum Air Temperature (F)`),\n            min = min(`Maximum Air Temperature (F)`),\n            max = max(`Maximum Air Temperature (F)`))\n\nQ11: Did our summarizing work? Can you figure out why not? (Hint: look at the field type of the maximum air temperature column)\nWe’ve got a missing data issue in our dataset. R is able to recognize blank cells, or cells with NA as missing data. However, in our temperature dataset, they use MV to represent missing data, which R does not recognize. Because all data must be the same type in a tidyverse column, this data, which is numeric, has been read in as string to account for the “MV” value in some of the cells. To fix this, we can “force” the data to numeric, which will replace any non-numeric characters with NA. When you run the command below, it should give you a warning that NAs were introduced by coersion. That’s good!\n\n#aggregate by station and season\nch_temp_agg &lt;- ch_temp |&gt;\n  mutate(temp = as.numeric(`Maximum Air Temperature (F)`)) |&gt;\n  group_by(season, Location, Latitude, Longitude) |&gt;\n  summarise(mean = mean(temp, na.rm = TRUE),\n            min = min(temp, na.rm = TRUE),\n            max = max(temp, na.rm = TRUE))\n\n\n\n8.2.4 Step 3: Pivot the Data\nRight now, our dataset has multiple rows per station, one row for each season. Ultimately, we want a single row per station. In the tidyverse universe, we call this “pivoting”. In this case, we want to “widen” our data\n\n#pivot wider (move seasons from rows to columns)\nch_temp_wide &lt;- ch_temp_agg |&gt;\n  pivot_wider(\n    names_from = season,\n    values_from = c(mean, min, max),\n    names_sep = \"_\"\n  )\n\n\n\n8.2.5 Step 4: Make our Data Spatial\nQ12: The latitude and longitude values in the ch_temp_wide object are in CRS =4326. Using the command we learned in the Introduction to Spatial Data chapter, convert this object to a spatial object and map the maximum summer temperature at the four stations. Add the command tmap_options(\"view\") before you create the map.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review: Advanced Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "wrangling.html#mini-challenge",
+    "href": "wrangling.html#mini-challenge",
+    "title": "8  Review: Advanced Tidyverse",
+    "section": "8.3 Mini Challenge",
+    "text": "8.3 Mini Challenge\nIn this challenge, you should add a code chunk that does the following:\n\nPivot the sat_data object wider (so that the yearly data becomes columns, not rows)\nAdd a column that represents the difference between average SAT score before Covid (2019) and directly after Covid (2021)\nJoin the SAT data to the schools object. Remember that the spatial object must go first in the join.\nMake a map of school SAT score change",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review: Advanced Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_wrangling.html",
+    "href": "spatial_wrangling.html",
+    "title": "9  Tutorial: Spatial Wrangling",
+    "section": "",
+    "text": "9.1 Research Question 1: Which schools in Durham, NC are most accessible by sidewalk?\nYou will not turn in this tutorial. This tutorial is designed as an ungraded contact-time activity that allows you to gain the skills necessary to complete HW#3.\nBeyond wrangling the structure and attributes of our data (like in the Advanced Tidyverse review), we can also wrangle our spatial features.This involves using spatial relationships to create new variables. After completing these exercises, you should be able to:\nWe will use the following datasets in this chapter:\nTo start, create a new .Rmd document. Add a first-level header called “Reading in Data”. Then add the following code chunk. For each of the research questions below, add an additional header and code chunk.\nAny time we do spatial analysis in R, we MUST use a projected coordinate system. For these exercises, we will use CRS = 2264 (North Carolina State Plane)\nQ1: For each of the vector objects above, transform them to CRS = 2264. Do not transform the raster.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tutorial: Spatial Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_wrangling.html#research-question-1-which-schools-in-durham-nc-are-most-accessible-by-sidewalk",
+    "href": "spatial_wrangling.html#research-question-1-which-schools-in-durham-nc-are-most-accessible-by-sidewalk",
+    "title": "9  Tutorial: Spatial Wrangling",
+    "section": "",
+    "text": "9.1.1 Plain Language Summary:\nWe have two spatial datasets: one showing the locations of sidewalks in Durham, NC, and another showing the locations of schools. To understand how accessible each school is by sidewalk, we first create an area around each school (for instance, a .5 mile radius) using a buffer. This buffer represents the nearby area that students might reasonably walk.\nNext, we use a spatial join to identify which sidewalks fall within each school’s buffer. This is like a table join, but is joining by location, instead of a key field. We can then measure the length of each sidewalk, and aggregate this to the school buffer level.\n\n\n9.1.2 Step 1: Add Buffer Around Schools\nOur schools are currently represented by points. Buffers allow us to add a zone around features. In our case, we will add a .5 mile zone around each school to represent the walkable area around each school. Remember that our units in crs = 2264 are in FEET.\n\n#add a buffer around each school\nbuffered_schools &lt;- durham_schools |&gt; st_buffer(dist = 2640)\n\n\n\n9.1.3 Step 2: Calculate the Length of Each Sidewalk Segment\nNow we calculate the length of each sidewalk segment. This will be calculated as a “Units” field type. We’ll convert this to standard numeric since we know the data is in feet (due to our coordinate system)\n\ndurham_sidewalks &lt;- durham_sidewalks |&gt;\n  #get length of the geometry column in data\n  mutate(length_sidewalk = as.numeric(st_length(geometry)))\n\n\n\n9.1.4 Step 3: Join Sidewalks to School Buffers\nWe use a spatial join to link sidewalk segments to school buffers based on spatial intersection. This join assigns each sidewalk to the school or schools whose buffer it falls within. Because a sidewalk can be within walking distance of more than one school, the same sidewalk segment may appear multiple times in the joined dataset. This is expected and reflects a many-to-many spatial relationship.\nAfter the spatial join, we are no longer doing spatial operations. From this point forward, we are working with a table of relationships between sidewalks and schools. To simplify the data and avoid confusion, we drop the geometry column.\n\nsidewalks_by_school &lt;- durham_sidewalks |&gt;\n  # join by intersection\n  st_join(buffered_schools) |&gt; \n  # drop geometry for aggregation (aggregating geometries is not a good idea!)\n  st_drop_geometry()\n\nQ2: Open up the sidewalks_by_school object. What is different about this object compared to the original durham_sidewalks object?\n\n\n9.1.5 Step 4: Aggregate Sidewalk Data to School Level\nNow that we are done with the spatial wrangling, we are back to known territory.\nQ3: Using the group_by() and summarise() commands, calculate the total length of sidewalks in each school zone.\nQ4: Using a standard table join left_join() , join the aggregated sidewalk data back to the school points. Remember to identify a matching key field. Then make a map of sidewalk accessibility per school.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tutorial: Spatial Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_wrangling.html#research-question-2-which-schools-in-durham-nc-have-the-hottest-surrounding-area",
+    "href": "spatial_wrangling.html#research-question-2-which-schools-in-durham-nc-have-the-hottest-surrounding-area",
+    "title": "9  Tutorial: Spatial Wrangling",
+    "section": "9.2 Research Question 2: Which schools in Durham, NC have the hottest surrounding area?",
+    "text": "9.2 Research Question 2: Which schools in Durham, NC have the hottest surrounding area?\n\n9.2.1 Plain Language Summary\nWe have already calculated our zones of influence around schools (buffered_schools). We have a raster dataset of temperature values collected during a Heat Mapping Campaign in the summer of 2021. Each cell in this raster represents the temperature at a specific location. To determine which schools are surrounded by the hottest areas, we calculate zonal statistics. This means we summarize the temperature values from the raster that fall within each school’s buffer. For example, we can calculate the average, maximum, or minimum temperature within each buffer. By comparing these summary statistics across schools, we can identify which schools are located in areas with higher surrounding temperatures and may be more exposed to extreme heat.\nQ5: First, make a simple map of the raster heat data. What patterns do you see?\n\n#calculate zonal statistics\nbuffered_schools &lt;- buffered_schools |&gt; mutate(av_temp = exact_extract(durham_heat, geometry, fun = \"mean\"))\n\nQ6: Make a non-map graphic of the av_temp column.\nQ7: Make a map of av_temp by school.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tutorial: Spatial Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_wrangling.html#research-question-3-what-is-the-closest-hospital-to-each-nursing-home-in-nc-and-how-far-away-is-it",
+    "href": "spatial_wrangling.html#research-question-3-what-is-the-closest-hospital-to-each-nursing-home-in-nc-and-how-far-away-is-it",
+    "title": "9  Tutorial: Spatial Wrangling",
+    "section": "9.3 Research Question 3: What is the closest hospital to each nursing home in NC, and how far away is it?",
+    "text": "9.3 Research Question 3: What is the closest hospital to each nursing home in NC, and how far away is it?\n\n9.3.1 Plain Language Summary\nOur medical_facilities object contains both hospitals and nursing homes. To find the closest hospital to each nursing home, we first separate these two facility types into their own datasets. We then use a built-in spatial function, st_nearest_feature(), which works by looking at each nursing home and identifying the single nearest hospital based on straight-line (Euclidean) distance. Once we know which hospital is closest to each nursing home, we use st_distance() to calculate the distance between the nursing home and that nearest hospital. This gives us a numeric distance value for each nursing home, measured in the units of the dataset’s coordinate reference system.\nQ8: Make two new objects hospitals and nursing_homes. You will use the filter() command to select these facility types out of the medical_facilities object.\n\n#command to calculate nearest hospital and distance\nnursing_homes &lt;- nursing_homes |&gt;\n  mutate(\n    #this command returns the INDEX of the nearest hospital\n    nearest_hosp = st_nearest_feature(nursing_homes, hospitals),\n    #this command gets the name of the nearest hospital using base R syntax\n    hospital_name = hospitals$facility[nearest_hosp],\n    #this calculates the distance using base R synax\n    dist_hospital = st_distance(\n      nursing_homes,\n      hospitals[nearest_hosp, ],\n      by_element = TRUE\n    )\n  )\n\nQ9: Which nursing home is furthest from the nearest hospital? Which nursing home is the closest?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tutorial: Spatial Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_wrangling.html#mini-challenge",
+    "href": "spatial_wrangling.html#mini-challenge",
+    "title": "9  Tutorial: Spatial Wrangling",
+    "section": "9.4 Mini Challenge",
+    "text": "9.4 Mini Challenge\nIn this challenge, you should add a code chunk that does the following:\n\nFilter your nursing_home object to just those in Durham County\nCompute a 1000ft buffer around each Durham nursing home\nCalculate the maximum temperature within each 1000ft buffer using the exact_extract() function (note that the raster does not cover the whole county, so not every nursing home will have a temperature value)\nMake a map of maximum temperature near Durham nursing homes",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tutorial: Spatial Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html",
+    "href": "analytical_datasets.html",
+    "title": "10  HW #3",
+    "section": "",
+    "text": "10.1 Formatting Guidance (SAMPLE FILE)",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#formatting-guidance-sample-file",
+    "href": "analytical_datasets.html#formatting-guidance-sample-file",
+    "title": "10  HW #3",
+    "section": "",
+    "text": "Submission:\n\nYou should submit two files for each lab– a .Rmd and a .html.\nYou should not submit any other files.\nThe files should be saved using the following convention: LASTNAME_HW_3.Rmd\n\nCode:\n\nAll R code must appear inside code chunks. Do not place any code in the body text.\nAll commands MUST have a descriptive comment\nCode chunks should not display messages or warnings in the knitted .html. If messages or warnings are printed, you need to include message = F, warning = F in the r header.\nEach code chunk should perform one logical set of tasks/analyses (i.e. one code chunk could include all of your data manipulation, another code chunk could contain all of your data visualizations)\nDo not print large datasets or unnecessary intermediate outputs\n\nOrganization\n\nCode chunks should be logically organized under clear, informative section headers\nWritten responses should appear directly below the code chunk that produces the the relevant output",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#overview",
+    "href": "analytical_datasets.html#overview",
+    "title": "10  HW #3",
+    "section": "10.2 Overview",
+    "text": "10.2 Overview",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#rq1-what-is-the-distribution-of-moderate-or-worse-air-quality-days-by-nc-county-in-2025",
+    "href": "analytical_datasets.html#rq1-what-is-the-distribution-of-moderate-or-worse-air-quality-days-by-nc-county-in-2025",
+    "title": "10  HW #3",
+    "section": "10.5 RQ1: What is the distribution of moderate or worse air quality days by NC county in 2025?",
+    "text": "10.5 RQ1: What is the distribution of moderate or worse air quality days by NC county in 2025?\nIn this research question, our goal is to create an analytic variable representing the percent of air quality observations per county in 2025 that were moderate or worse air quality.\n\n10.5.1 Data:\n\nNorth Carolina county boundaries from US Census Bureau\n2025 air quality data by station from US EPA\n\n\nlibrary(tidyverse)\nlibrary(sf)\n\nnc_counties &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1g9sGIikgOEubqoj97fUVoCYAKlBDVX5a\")\n\naq &lt;- read_csv(\"https://drive.google.com/uc?export=download&id=1sP4D1SdDorB6c_MZo7H4mpkHoKOaNqIT\")\n\n\n\n10.5.2 Processing Steps:\n\nIn the aq object, each row represents a single day in 2025 at a single station. Aggregate the aq object to the station level (this will summarize values at that station over the year). The aggregated dataset should include two calculated columns total_obs (total number of observations in the year) total_less (total observations less than good AQI (AQI &gt; 50). The group_by command must include latitude and longitude as well as station ID.\nSpatialize the station data using the st_as_sf() command. The CRS = 4326\nReproject the nc_counties and aq objects into CRS = 2264 (North Carolina State Plane, ft)\nExecute a spatial join between aq and nc_counties. Drop geometry and aggregate the aq object to the county level (take the sum of the total_obs and total_less columns per county).\nCalculate a perc_less variable representing the percent of county observations that are less than good AQI.\nUse a table join to add your county-aggregated data to the nc_counties object.\nCreate a simplified dataset that includes only the following fields: GEOID, NAME, total_obs, total_less, perc_less.\nMap the perc_less variable for North Carolina counties.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#rq2-how-does-tree-cover-canopy-vary-within-walking-distance-from-bus-stops-in-chapel-hill-nc",
+    "href": "analytical_datasets.html#rq2-how-does-tree-cover-canopy-vary-within-walking-distance-from-bus-stops-in-chapel-hill-nc",
+    "title": "10  HW #3",
+    "section": "10.6 RQ2: How does tree cover canopy vary within walking distance from bus stops in Chapel Hill, NC?",
+    "text": "10.6 RQ2: How does tree cover canopy vary within walking distance from bus stops in Chapel Hill, NC?\nIn this research question, our goal is to create an analytic variable representing the percent tree canopy cover within .5 miles of each bus stop in Chapel Hill, NC.\n\n10.6.1 Data:\n\nBus stop locations from Chapel Hill Open Data\nTree canopy cover from NLCD. Each pixel value represents the percent of tree canopy cover in that pixel.\n\n\nlibrary(terra)\nlibrary(exactextractr)\n\nbus_stops &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1jRINUl-5uBAsBcWnKTRmdUO7ZTs1EV4G\")\n\ntree_canopy &lt;- rast(\"https://drive.google.com/uc?export=download&id=1_SqO-ocyLCg3g1Mv1ZbqOd5Pa1sTddps\")\n\n\n\n10.6.2 Processing Steps:\n\nTransform bus_stops object into EPSG:3857 to match the tree canopy projection. Note that the units in this projection are meters\nBuffer the bus_stops 804.672 meters (.5 miles)\nUse the exact_extract() function to add a field to the buffered bus stop object that represents the average canopy cover\nDrop the geometry\nCreate a simplified dataset that includes only the following fields: STOP_ID, average tree canopy variable\nMap the average tree canopy variable. Bus stop points (NOT buffers) should be visualized. You should use the st_drop_geometry() command and a left_join() to join your buffered values back to the original bus stop object",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#rq3-how-accessible-are-bus-stops-to-chapel-hill-addresses",
+    "href": "analytical_datasets.html#rq3-how-accessible-are-bus-stops-to-chapel-hill-addresses",
+    "title": "10  HW #3",
+    "section": "10.7 RQ3: How accessible are bus stops to Chapel Hill addresses?",
+    "text": "10.7 RQ3: How accessible are bus stops to Chapel Hill addresses?\nIn this research question, our goal is to create an analytic variable representing the distance of each address in Chapel Hill to the nearest bus stop.\n\n10.7.1 Data:\n\nBus stop locations from Chapel Hill Open Data\nChapel Hill addresses from Chapel Hill Open Data\n\n\nch_addresses &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1fFXfEbOWjwfsT_JLeLYnaVPkbJCGYA2_\")\n\n\n\n10.7.2 Processing Steps:\n\nTransform the ch_addresses object into EPSG:3857 to match the bus stop object.\nCalculate the distance (in meters) from each address to the nearest bus stop.\nCreate a simplified dataset that includes only the following fields: OBJECTID, LBCSDesc, distance variable\nCreate a map of the distance variable for Chapel Hill addresses",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "hw2.html",
+    "href": "hw2.html",
+    "title": "5  HW #2",
+    "section": "",
+    "text": "5.1 Formatting Guidance (SAMPLE FILE)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>HW #2</span>"
+    ]
+  },
+  {
+    "objectID": "hw2.html#formatting-guidance-sample-file",
+    "href": "hw2.html#formatting-guidance-sample-file",
+    "title": "5  HW #2",
+    "section": "",
+    "text": "Submission:\n\nYou should submit two files for each R based homework– a .Rmd and a .html.\nYou should not submit any other files.\nThe files should be saved using the following convention: LASTNAME_HW_2.Rmd\n\nCode:\n\nAll R code must appear inside code chunks. Do not place any code in the body text.\nAll commands MUST have a descriptive comment\nCode chunks should not display messages or warnings in the knitted .html. If messages or warnings are printed, you need to include message = F, warning = F in the r header.\nEach code chunk should perform one logical set of tasks/analyses (i.e. one code chunk could include all of your data manipulation, another code chunk could contain all of your data visualizations)\nDo not print large datasets or unnecessary intermediate outputs\n\nOrganization\n\nCode chunks should be logically organized under clear, informative section headers\nWritten responses should appear directly below the code chunk that produces the the relevant output",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>HW #2</span>"
+    ]
+  },
+  {
+    "objectID": "hw2.html#overview",
+    "href": "hw2.html#overview",
+    "title": "5  HW #2",
+    "section": "5.2 Overview",
+    "text": "5.2 Overview\nIn this homework you will practice working with spatial data in R by examining spatial and non-spatial attributes, mapping variables, and calculating descriptive and spatial descriptive statistics.\nYou will work with several spatial datasets:\n\nAmerican Community Survey data on average commute for North Carolina counties and census tracts (vector data)\nModeled Wet Bulb Globe Temperature on July 17, 2025 across Orange County, NC provided by Andrew Robinson (Geography PhD student) (raster data). WBGT is a measure of heat stress.\nLocations of wind turbines in the continental US from The U.S. Wind Turbine Database",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>HW #2</span>"
+    ]
+  },
+  {
+    "objectID": "hw2.html#rubric",
+    "href": "hw2.html#rubric",
+    "title": "5  HW #2",
+    "section": "5.3 Rubric",
+    "text": "5.3 Rubric\n\n\n\n\n\n\n\nSpecification\nPoints\n\n\n\n\nLab is submitted on Canvas and follows general formatting guidelines. Minor formatting issues may be present but do not interfere with readability or interpretation.\n3\n\n\nReading Data: All required datasets are read into R. Responses correctly identify basic properties of the data. Minor inaccuracies are acceptable if overall understanding is clear.\n3\n\n\nManipulating Data: Code produces the required variables and transformed datasets. Minor coding errors or inefficiencies are acceptable if the results are usable.\n7\n\n\nDescribing Data: Required maps, tables, and non-map graphics are present. Written responses correctly describe patterns or distributions shown in the outputs. Response is focused on extracting meaning, not simply summarizing descriptive statistics results.\n7",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>HW #2</span>"
+    ]
+  },
+  {
+    "objectID": "hw2.html#homework-instructions",
+    "href": "hw2.html#homework-instructions",
+    "title": "5  HW #2",
+    "section": "5.4 Homework Instructions",
+    "text": "5.4 Homework Instructions\nCreate a new .Rmd document. Then complete the following tasks. Your .Rmd file should be organized so that each task has a text header, a code chunk, comments for each command, and any written components directly under the chunk. Remember to follow the Formatting Guide.\nReading Data\n\nLoad the tidyverse , tmap, terra, sfdep, and sf libraries\nRead in the data using the following commands:\n\nturbines &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1LLl871Mv3BY7hI56kWPiaMvvk5SxFcQX\")\n\ncounty_wfh &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1kV-HKXvlrhfSKOHli4QuRfNoW6I76ihN\")\n\ntract_wfh &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1H-MgCZmca_0YLHg3P6zxqhVrldOTddyD\")\n\nwbgt_raster &lt;- rast(\"https://drive.google.com/uc?export=download&id=1l4kZvyCf9ySy7CQlKlzl5y9z6aYHHlpa\")\n\nAnswer the following questions:\n\nWhat is the CRS of each dataset? Is it a geographic coordinate system or a projected coordinate system?\nWhat is the geometry type of turbines, county_wfh, and tract_wfh?\nWhat is the resolution of the WBGT data?\n\n\nManipulating Data\n\nUse a tidyverse command to calculate a new field perc_wfh in the county_wfh and tract_wfh objects. (wfeE is the number of people working from home and totalE is the total population)\n\nDescribing Work From Home\n\nCreate a map of perc_wfh for both the county_wfh and tract_wfh objects.\nCreate a descriptive statistics table of perc_wfh for both the county_wfh and tract_wfh objects\n\nTo make a descriptive statistics table when you are using spatial data you must add the command st_drop_geometry() before creating the table (i.e. DATA |&gt; st_drop_geometry() |&gt; select(VARIABLE)\n\nCreate one non-map graphic of perc_wfh for both the county_wfh and tract_wfh objects\nAnswer the following questions (Remember that the underlying data for the ACS is collected at the individual/household level, the only difference is the level of spatial aggregation):\n\nHow does the distribution of perc_wfh differ between the county-level and tract level data? Include discussion of central tendency, spread, shape, and frequency.\nHow does changing the scale of aggregation (counties vs. tracts) affect the spatial pattern you observe?\nWhat does this example demonstrate about the scale effect of MAUP and why it matters for interpreting spatial data?\n\n\nDescribing Heat Stress in Orange County NC\n\nCreate a map of wbgt_raster\nSummarize the cell values of wbgt_raster\n\nDescribing Wind Turbines\n\nCalculate mean center of wind turbines, standard deviational ellipse of wind turbines, and weighted mean center based on a variable of interest selected from the dataset.\n\nTo calculate the weighted mean center, you may need to drop NA values from your variable of interest. To do this, create a new object turbine_dropped &lt;- turbines |&gt; drop_na(VARIABLEOFINTEREST) and use that object to calculate the weighted mean center.\n\nCreate a map that symbolizes the mean center of wind turbines, the standard deviational ellipse of wind turbines, and the weighted mean center (make sure that you add manual legend entries for the mean center and weighted mean center)\nAnswer the following questions:\n\nWhat does your map reveal about the spatial distribution of wind turbines?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>HW #2</span>"
+    ]
+  },
+  {
+    "objectID": "map_competition.html#map-prompt-create-a-well-designed-map-of-weekend-bus-serviceability-to-chapel-hill-parks",
+    "href": "map_competition.html#map-prompt-create-a-well-designed-map-of-weekend-bus-serviceability-to-chapel-hill-parks",
+    "title": "7  Group Workshop: Map Competition",
+    "section": "7.1 Map Prompt: Create a well-designed map of weekend bus serviceability to Chapel Hill parks",
+    "text": "7.1 Map Prompt: Create a well-designed map of weekend bus serviceability to Chapel Hill parks\n\nch_boundary &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1ievfdMpmrZBO1qBI_uILYpb1XbVXmC0b\")\n\nnum_weekend_buses &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1sm1wakDXNoHQjXHhScH7Q5QdgqRvZTCD\")\n\nparks &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1WfzXK_3NZsll9ov8uD5-9i8ceVMlEUlN\")",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Group Workshop: Map Competition</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#rubric",
+    "href": "analytical_datasets.html#rubric",
+    "title": "10  HW #3",
+    "section": "10.3 Rubric",
+    "text": "10.3 Rubric\n\n\n\n\n\n\n\nSpecification\nPoints\n\n\n\n\nLab is submitted on Canvas and follows general formatting guidelines. Minor formatting issues may be present but do not interfere with readability or interpretation.\n5\n\n\nRQ1: Processing directions are followed and map clearly represents final analytical dataset.\n5\n\n\nRQ2: Processing directions are followed and map clearly represents final analytical dataset.\n5\n\n\nRQ3: Processing directions are followed and map clearly represents final analytical dataset.\n5",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#homework-instructions.",
+    "href": "analytical_datasets.html#homework-instructions.",
+    "title": "10  HW #3",
+    "section": "10.3 Homework Instructions.",
+    "text": "10.3 Homework Instructions.\nCreate a new .Rmd document. For each of the research questions below, create a text header. Then complete the analysis in a code chunk (with a descriptive comment for each command). Remember to follow the Formatting Guide.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#homework-overview",
+    "href": "analytical_datasets.html#homework-overview",
+    "title": "10  HW #3",
+    "section": "10.2 Homework Overview",
+    "text": "10.2 Homework Overview\nIn this homework you will practice executing both spatial and non-spatial wrangling to feature engineer three analytical datasets.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analytical_datasets.html#instructions",
+    "href": "analytical_datasets.html#instructions",
+    "title": "10  HW #3",
+    "section": "10.4 Instructions",
+    "text": "10.4 Instructions\nCreate a new .Rmd document. For each of the research questions below, create a text header. Then complete the analysis in a code chunk (with a descriptive comment for each command). Remember to follow the Formatting Guide.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>HW #3</span>"
+    ]
+  },
+  {
+    "objectID": "analyticaldatasetworkshop.html",
+    "href": "analyticaldatasetworkshop.html",
+    "title": "11  Group Workshop: Analytical Dataset",
+    "section": "",
+    "text": "This group workshop is designed to assess ability to apply spatial feature engineering concepts.\n\n11.0.1 Instructions\n\nCreate a new .Rmd named LASTNAME1LASTNAME2.Rmd (include all last names in your group)\nComplete the following tasks. Your .Rmd file should be organized so that each task has a text header, a code chunk, comments for each command, and any written components directly under the chunk.\n\nReading Data\n\nLoad the tidyverse , tmap, terra, and sf libraries\nRead in the data using the following commands:\n\n#all ems stations across the triangle region\ntriangle_ems &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1JYZxoM3GB43AnSY2mKW1p_ixeBBh1CBJ\")\n\n#all census blocks across the triangle region\ntriangle_blocks &lt;- st_read(\"https://drive.google.com/uc?export=download&id=1Q6f9wPXrN0NMZJZkAR9OFkneCfxIBiOl\")\n\n#all census blocks across chapel hill\nch_blocks &lt;- st_read(\"https://drive.google.com/uc?export=download&id=14Jhu9ZQDRL14lQGiTUKcqqrsQcooH6BU\")\n\n#raster of average summer temp in ch (in celcius)\nch_summer_heat &lt;- rast(\"https://drive.google.com/uc?export=download&id=1qvJepSdhFTiKZIAyn76VA9xvlIM8f5s8\")\n\n#raster of canopy cover in ch (% per pixel)\nch_canopy_cover &lt;- rast(\"https://drive.google.com/uc?export=download&id=1a5MibyiyAJgxIqTxzSBOoMNqklErlIVR\")\n\n\nAnalytic Dataset #1\nFor this analytic dataset you should create a new object that adds two columns to the ch_blocks object. One column, av_heat should be the average summer heat across each block. The second column, av_canopy should be the average tree canopy across each block.\nAfter creating the analytic dataset, create a scatterplot (dataset |&gt; ggplot(aes(x = VARIABLE1, y= VARIABLE2) + geom_point()) that shows the relationship between summer heat and canopy coverage across Chapel Hill.\nBelow the code chunk, write a brief interpretation of the relationship shown in the scatterplot.\nAnalytic Dataset #2\nFor this analytic dataset you should create a new object that adds a column to the triangle_blocks object. The new column (count_ems) should include a count of each EMS station that is within 5 miles of the block group.\nAfter creating the analytic dataset, create a basic map that displays the count_ems variable across the triangle.\nBelow the code chunk, write a brief interpretation of the spatial pattern of the map.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Group Workshop: Analytical Dataset</span>"
     ]
   }
 ]

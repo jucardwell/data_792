@@ -1,3 +1,7 @@
+# Introduction to Spatial Data/ HW#1
+
+As you move through this reading, take note of the reflection questions (REFLECT). Write answers to these questions on a separate document. You will turn in that document as HW#1.
+
 # Introduction to Spatial Data
 
 A common headache in classical statistics is the '[spatial problem](https://courses.ems.psu.edu/geog586/node/641)': the fact that spatial data inherently violates the fundamental assumption of independent observations. Rather than treating this as a problem, **Spatial Data Science** focuses on leveraging the unique characteristics of spatial data to extract more information from data with a locational component. This chapter conceptually introduces the unique components of spatial data, which will set you up to learn how to use these components to gain deeper insights from this type of data.
