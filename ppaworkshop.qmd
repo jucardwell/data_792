@@ -1,0 +1,19 @@
+# Group Workshop: Point Pattern Analysis 
+
+This group workshop is designed to assess ability to conduct Point Pattern Analysis from start (identifying data) to finish (interpreting global and local results, generating hypotheses)
+
+### Instructions
+
+1.  Find and download a point dataset (consider sources such as NCOneMap, Town of Chapel Hill Open Data, etc.). Your point dataset must represent meaningful locations of events.
+
+2.  Create a new .Rmd named LASTNAME1LASTNAME2.Rmd (include all last names in your group)
+
+3.  Complete the following tasks:
+
+    1.  Prepare your point data for analysis. You will need to read in your data, transform it to a projected CRS (use CRS = 2264 for NC), calculate a bounding box, and convert your data to a `ppp` object.
+
+    2.  Assess Global Structure in your dataset. You will need to determine an appropriate partitioning scheme for your quadrats and test the quadrat count against CRS using a quadrat density test with Monte Carlo simulations. Then create and visualize a KDE for your data.
+
+    3.  Assess Local Structure. Run an ANN analysis that uses Monte Carlo simulations (n = 99) to create an empirical probability. You will need to determine if your simulations should homogeneous or inhomogeneous based on your global analysis.Then evaluate the L-function and envelope (n = 99). You will need to determine if you should use the homogeneous or inhomogeneous function (and simulations) based on your global analysis.
+
+    4.  In text below your analysis, identify whether there is evidence for the pattern of wildfires reflecting first-order processes, second-order processes, or a combination of both by clearly interpreting your analytical results. Based on brief background research on your dataset, propose one specific, plausible hypothesis about an underlying process that could be contributing to the spatial pattern.

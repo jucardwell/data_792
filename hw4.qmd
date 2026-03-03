@@ -1,0 +1,80 @@
+# HW #4
+
+## Formatting Guidance ([SAMPLE FILE](https://drive.google.com/file/d/1t7YkI9z3lFiUyRwKfXYCgg6L_oUxSuap/view?usp=sharing))
+
+-   Submission:
+    -   You should submit two files for each R based homework– a .Rmd and a .html.
+    -   You should not submit any other files.
+    -   The files should be saved using the following convention: LASTNAME_HW_2.Rmd
+-   Code:
+    -   All R code must appear inside code chunks. Do not place any code in the body text.
+    -   All commands **MUST** have a descriptive comment
+    -   Code chunks should not display messages or warnings in the knitted .html. If messages or warnings are printed, you need to include `message = F, warning = F` in the r header.
+    -   Each code chunk should perform one logical set of tasks/analyses (i.e. one code chunk could include all of your data manipulation, another code chunk could contain all of your data visualizations)
+    -   Do not print large datasets or unnecessary intermediate outputs
+-   Organization
+    -   Code chunks should be logically organized under clear, informative section headers
+    -   Written responses should appear directly below the code chunk that produces the the relevant output
+
+## Overview
+
+In the Point Pattern Analysis tutorial, we learned how to interpret the spatial structure of unmarked point data.
+
+In this lab, you will practice applying these skills to a dataset representing wildfire locations in Croatan National Forest in North Carolina from 1957-2024 (from [US Forest Service](https://data-usfs.hub.arcgis.com/datasets/usfs::national-usfs-fire-occurrence-point-feature-layer/explore?location=64.276190%2C-9.593052%2C5.89)) and a dataset representing locations of fire stations along the I-40 corridor in North Carolina.
+
+## Rubric
+
+| Specification | Points |
+|------------------------------------------------------|------------------|
+| HTML and RMD versions the R Markdown file have been submitted. The RMD is clearly organized (appropriate headings, code chunk formatting, and clean output) so that the analysis is easy to read and understand | 3 |
+| **Analyzing Global Structure:** Student maps the point pattern, computes and visualizes a quadrat count (with Monte Carlo simulations) and tests it against CSR, and creates a kernel density estimate for both datasets. | 6 |
+| **Analyzing Local Structure:** Student computes and visualizes ANN and L-function (both with Monte Carlo simulations). Student appropriately determines whether to test against CSR or an Inhomogeneous Poisson Pattern. | 6 |
+| **Describing Results**: Student integrates global and local results to identify the dominant spatial process (first-order, second-order, or both) and proposes a specific hypothesis informed by background research. | 5 |
+
+## Homework Instructions
+
+-   Create a new .Rmd named "LASTNAME_HW4.Rmd".
+
+-   Remove sample text (leaving the header and set-up chunk). Add a chunk for loading libraries and reading in data. Add the following code into that chunk:
+
+    ```{r, eval=F}
+    #load libraries
+    library(sf)
+    library(tidyverse)
+    library(spatstat)
+
+    wildfire_points <- st_read("https://drive.google.com/uc?export=download&id=16m9HJAn5uzSyiUdhdhoboPRRi9dDDQaT") |> st_transform(crs =2264)
+
+    ###THIS TURNS THE DATA INTO A POINT PATTERN OBJECT WITH A DEFINED BOUNDARY###
+    ### USE THIS FOR PPA####
+    combined_wildfire <- st_union(wildfire_points)
+    bb_wildfire <- st_convex_hull(combined_wildfire) |> as.owin()
+    wildfire.ppp <- as.ppp(st_coordinates(wildfire_points), W = bb_wildfire)
+
+    fire_stations <- st_read("https://drive.google.com/uc?export=download&id=1bjAeEaoVZUjf9VLJTKl_anABwznioAoa")
+
+    ###THIS TURNS THE DATA INTO A POINT PATTERN OBJECT WITH A DEFINED BOUNDARY###
+    ### USE THIS FOR PPA#####
+    combined_firestation <- st_union(fire_stations)
+    bb_firestation <- st_convex_hull(combined_firestation) |> as.owin()
+    firestation.ppp <- as.ppp(st_coordinates(fire_stations), W = bb_firestation)
+
+    ```
+
+-   Under a header called "Analyzing Wildfire Points" add a code chunk, and a written analysis below the code chunk that does the following:
+
+    -   Make a map (with basemap) of the `wildfire_points` object
+    -   Test the quadrat count against CSR using a quadrat density test (use nx = 8, ny = 8). Add Monte Carlo simulations (n = 99) to the statistical testing
+    -   Create a KDE for wildfire counts
+    -   Run an ANN analysis that uses Monte Carlo simulations (n = 99) to create an empirical probability. You will need to determine if your simulations should homogeneous or inhomogeneous based on your global analysis.
+    -   Evaluate the L-function and envelope (n = 99). You will need to determine if you should use the homogeneous or inhomogeneous function (and simulations) based on your global analysis.
+    -   In text below the chunk, identify whether there is evidence for the pattern of wildfires reflecting first-order processes, second-order processes, or a combination of both by clearly interpreting your analytical results. Based on brief background research on wildfires and the study area, propose one specific, plausible hypothesis about an underlying process that could be contributing to the spatial pattern.
+
+-   Under a header called "Analyzing Fire Stations" add a code chunk, and a written analysis below the code chunk that does the following:
+
+    -   Make a map (with basemap) of the `fire_stations` object
+    -   Test the quadrat count against CSR using a quadrat density test (use nx = 4, ny = 3). Add Monte Carlo simulations (n = 99) to the statistical testing
+    -   Create a KDE for fire stations
+    -   Run an ANN analysis that uses Monte Carlo simulations (n = 99) to create an empirical probability. You will need to determine if your simulations should homogeneous or inhomogeneous based on your global analysis.
+    -   Evaluate the L-function and envelope (n = 99). You will need to determine if you should use the homogeneous or inhomogeneous function (and simulations) based on your global analysis.
+    -   In text below the chunk, identify whether there is evidence for the pattern of fire stations reflecting first-order processes, second-order processes, or a combination of both by clearly interpreting your analytical results. Propose one specific, plausible hypothesis about an underlying process that could be contributing to the spatial pattern.

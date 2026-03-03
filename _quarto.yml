@@ -19,6 +19,9 @@ book:
     - spatial_wrangling.qmd
     - analytical_datasets.qmd
     - analyticaldatasetworkshop.qmd
+    - ppa.qmd
+    - hw4.qmd
+    - ppaworkshop.qmd
 
 format:
   html:
